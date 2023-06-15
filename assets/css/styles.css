@@ -7,33 +7,47 @@ body {
   color: #fff;
 }
 
+nav {
+  margin-left: 25px;
+}
+
+li {
+  display: inline-block;
+}
+
 a {
   color: #ffffff;
   text-decoration: none;
 }
+
 h1,
 h2 {
   text-transform: uppercase;
   display: inline-block;
 }
+
 header,
 footer {
   display: flex;
   align-items: center;
   padding: 10px;
 }
+
 header {
   justify-content: space-between;
 }
+
 .browse {
   flex-grow: 1;
   display: flex;
   justify-content: center;
 }
+
 footer {
   flex-direction: column;
   text-align: center;
 }
+
 footer nav ul {
   list-style: none;
   margin: 10px;
@@ -84,7 +98,9 @@ footer nav ul li {
   padding-left: 150px;
   padding-right: 150px;
 }
-
+.cta-center {
+  text-align: center;
+}
 /* Banners and bars */
 .banners {
   background-color: rgba(255, 255, 255, 0.05);
@@ -95,7 +111,6 @@ footer nav ul li {
 .genrebar {
   margin: 0 50px;
   list-style: none;
-  padding: 10px;
   display: flex;
   justify-content: center;
 }
@@ -104,28 +119,6 @@ footer nav ul li {
   margin: 0 50px;
 }
 
-li {
-  display: inline-block;
-}
-nav {
-  margin-left: 25px;
-}
-
-nav ul {
-  padding: 0px;
-}
-
-nav li {
-  display: inline-block;
-}
-
-.film-banner {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  text-align: center;
-  gap: 10px;
-}
 .recommandations {
   width: 280px;
 }
@@ -151,16 +144,6 @@ nav li {
   height: 50vh;
 }
 
-.best-seller-text {
-  color: #fff;
-  text-transform: uppercase;
-  text-align: center;
-}
-.featured {
-  display: grid;
-  grid-template-columns: repeat(6, 1fr);
-  justify-items: center;
-}
 .discover {
   display: grid;
   grid-template-columns: repeat(4, minmax(20px, 1fr));
@@ -173,12 +156,12 @@ nav li {
   width: 100%;
   box-shadow: 0 10px 15px rgba(0, 0, 0, 0.7);
 }
+
+/* genre*/
 .products {
   flex-basis: calc(50% - 10px);
   margin-bottom: 20px;
   position: relative;
-}
-.products {
   display: grid;
   grid-template-columns: repeat (6, 20px);
   grid-template-rows: repeat (1, auto);
@@ -190,25 +173,11 @@ nav li {
   transform: translate(-50%, -50%);
   text-align: center;
 }
-.products img {
-  display: block;
-  width: 100%;
-  height: auto;
-}
-.products img {
-  grid-column: -1/1;
-}
 
 .products-recommandation {
   display: grid;
   grid-template-columns: repeat (3, 20px);
 }
-
-.products-recommandation img {
-  grid-column: -1/1;
-}
-
-/* genre*/
 
 .film-list {
   display: grid;
@@ -268,11 +237,6 @@ nav li {
   margin-right: 50px;
 }
 
-.film-details-recommandation {
-  display: grid;
-  grid-template-columns: repeat (3, 20px);
-}
-
 .film-recommandation img {
   grid-column: -1/1;
 }
@@ -317,8 +281,4 @@ nav li {
   height: 100px;
   padding: 80px;
   float: left;
-}
-
-.button-position {
-  text-align: center;
 }
