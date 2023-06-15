@@ -212,10 +212,22 @@ nav li {
 /* genre*/
 .featured {
   display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  justify-items: center;
+}
+
+.film-list {
+  display: grid;
   grid-template-columns: repeat(auto-fit, minmax(20px, 1fr));
   justify-items: center;
-  gap: 50px;
+  gap: 20px;
+  margin: 50px;
 }
+.film-list img {
+  height: 100%;
+  width: 100%;
+}
+
 .products {
   display: grid;
   grid-template-columns: repeat (6, 20px);
