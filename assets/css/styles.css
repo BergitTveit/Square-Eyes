@@ -1,0 +1,251 @@
+body {
+  font-family: "Roboto Mono", Verdana, Geneva, Tahoma, sans-serif;
+  background-color: #121923;
+  margin: 0;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+}
+
+a {
+  color: #ffffff;
+  text-decoration: none;
+}
+p {
+  color: #fff;
+}
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+.logo {
+  margin-left: 50px;
+  width: 200px;
+  height: auto;
+}
+/*center buttons by browse class */
+.browse {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.search,
+.cart {
+  margin-left: 10px;
+}
+
+header,
+footer {
+  color: #fff;
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+footer nav ul {
+  list-style: none;
+  padding: 10px;
+  margin: 10px;
+  display: flex;
+  justify-content: center;
+}
+
+footer nav ul li {
+  margin: 0 70px;
+}
+
+/*CTA sizes*/
+
+.cta {
+  background-color: rgba(255, 255, 255, 0.05);
+  text-transform: uppercase;
+  border-radius: 50px;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.35);
+}
+
+.cta-best-seller {
+  padding: 30px;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+.cta-s {
+  padding: 15px;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.cta-l {
+  padding: 10px;
+  padding-left: 150px;
+  padding-right: 150px;
+}
+
+.cta-img {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+/* Banners and bars */
+.banners {
+  background-color: rgba(255, 255, 255, 0.05);
+  padding: 15px;
+  text-transform: uppercase;
+}
+.genrebar {
+  margin: 0 50px;
+  list-style: none;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+}
+
+.genrebar li {
+  margin: 0 50px;
+}
+
+h1,
+h2 {
+  text-transform: uppercase;
+  color: #fff;
+}
+
+li {
+  display: inline-block;
+}
+nav {
+  margin-left: 25px;
+}
+
+nav ul {
+  padding: 0px;
+}
+
+nav li {
+  display: inline-block;
+}
+
+.film-banner {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  text-align: center;
+  gap: 10px;
+}
+.recommandations {
+  width: 280px;
+}
+.products {
+  flex-basis: calc(50% - 10px);
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.products .cta {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+.products img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* Homepage */
+
+.best-seller-film {
+  background-image: url("../images/sweetheart.jpeg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 100%;
+  height: 50vh;
+  object-fit: 50%;
+  justify-content: center;
+  align-items: center;
+}
+
+.best-seller {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50vh;
+}
+
+.best-seller-text {
+  color: #fff;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+/*contact*/
+.contact {
+  max-width: 1000px;
+  margin: 50px auto;
+  text-align: center;
+}
+
+.form-wrapper {
+  display: flex;
+  text-align: left;
+}
+
+.form-wrapper > * {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+.form-wrapper-creditcard > * {
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+}
+
+/* genre*/
+.featured {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(20px, 1fr));
+  justify-items: center;
+  gap: 50px;
+}
+.products {
+  display: grid;
+  grid-template-columns: repeat (6, 20px);
+  grid-template-rows: repeat (1, auto);
+}
+
+.products img {
+  grid-column: -1/1;
+}
+
+@media screen and (max-width: 600px) {
+  header {
+    flex-wrap: wrap;
+  }
+
+  .logo,
+  .search,
+  .cart {
+    margin: 5px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .featured {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .featured {
+    grid-template-columns: 1fr;
+  }
+}

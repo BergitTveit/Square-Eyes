@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shopping Cart | Safe Check Out</title>
+    <link href="assets/css/styles.css" rel="stylesheet" />
+  </head>
+  <body>
+    <header>
+      <div>
+        <a href="index.html">
+          <img
+            src="assets/png/SquareEyes_Logo.png"
+            alt="SquareEyes Logo"
+            class="logo" />
+        </a>
+      </div>
+      <div class="browse">
+        <nav>
+          <ul>
+            <li>
+              <a href="genres/1genres.html" class="banners-button-small"
+                >Browse</a
+              >
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <div class="search">
+        <input type="text" placeholder="Search" />
+      </div>
+      <div class="cart">
+        <button>View Cart</button>
+      </div>
+      <div class="cart">
+        <button>Log in</button>
+      </div>
+    </header>
+
+    <main>
+      <section>
+        <div class="form-wrapper">
+          <form action="/submit-form" method="POST">
+            <p>Billing information</p>
+            <input
+              type="text"
+              id="credit-card"
+              name="credit-card"
+              placeholder="Credit Card Number" />
+            <input type="text" id="CVV" name="CVV" placeholder="CVV" />
+            <input
+              type="text"
+              id="Expiration date"
+              name="Expiration date"
+              placeholder="MM/YY" />
+            <p>Customer Information</p>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              placeholder="Name"
+              required />
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="E-mail"
+              required />
+            <input
+              type="mobile"
+              id="mobile"
+              name="mobile"
+              placeholder="Mobile"
+              required />
+            <textarea
+              id="message"
+              name="message"
+              placeholder="Your message"
+              required></textarea>
+          </form>
+          <button type="submit">Cancel</button>
+          <button type="submit">Buy now</button>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <nav class="banners">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="#">FAQ</a></li>
+        </ul>
+      </nav>
+
+      Copyright &copy;
+    </footer>
+  </body>
+</html>
