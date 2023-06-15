@@ -185,6 +185,11 @@ nav li {
   text-transform: uppercase;
   text-align: center;
 }
+.featured {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  justify-items: center;
+}
 
 /*contact*/
 .contact {
@@ -210,22 +215,43 @@ nav li {
 }
 
 /* genre*/
-.featured {
-  display: grid;
-  grid-template-columns: repeat(6, 1fr);
-  justify-items: center;
-}
 
 .film-list {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(20px, 1fr));
+  grid-template-columns: repeat(6, minmax(20px, 1fr));
   justify-items: center;
   gap: 20px;
+  row-gap: 50px;
   margin: 50px;
+  margin-bottom: 70px;
 }
 .film-list img {
   height: 100%;
   width: 100%;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.7);
+}
+
+.film-list-recommandation {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(20px, 1fr));
+  justify-items: center;
+  gap: 20px;
+  row-gap: 50px;
+  margin: 50px;
+  margin-bottom: 70px;
+}
+.film-list-recommandation img {
+  height: 100%;
+  width: 100%;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.7);
+}
+.products-recommandation {
+  display: grid;
+  grid-template-columns: repeat (3, 20px);
+}
+
+.products-recommandation img {
+  grid-column: -1/1;
 }
 
 .products {
