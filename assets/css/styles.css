@@ -276,7 +276,10 @@ nav li {
 .guitars h1{
   color: #d17314;
 }
-
+.guitar-place {
+  display: grid;
+  align-items: center;
+}
 
 .product-list {
   display: grid;
