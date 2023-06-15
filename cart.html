@@ -21,7 +21,7 @@
         <nav>
           <ul>
             <li>
-              <a href="genres/1genres.html" class="banners-button-small"
+              <a href="genres/1genres.html" class="cta cta-s"
                 >Browse</a
               >
             </li>
@@ -40,48 +40,58 @@
     </header>
 
     <main>
-      <section>
-        <div class="form-wrapper">
-          <form action="/submit-form" method="POST">
-            <p>Billing information</p>
-            <input
+      <section class="form">
+         <form action="/submit-form" method="POST">
+            <div>
+             <h3>Billing information</h3>
+              <input
               type="text"
               id="credit-card"
               name="credit-card"
               placeholder="Credit Card Number" />
-            <input type="text" id="CVV" name="CVV" placeholder="CVV" />
-            <input
+             <input type="text" id="CVV" name="CVV" placeholder="CVV" />
+          
+             <input
               type="text"
               id="Expiration date"
               name="Expiration date"
               placeholder="MM/YY" />
-            <p>Customer Information</p>
-            <input
+            <h3>Customer Information</h3>
+             <input
               type="text"
               id="name"
               name="name"
               placeholder="Name"
               required />
-            <input
+             <input
               type="email"
               id="email"
               name="email"
               placeholder="E-mail"
               required />
-            <input
+             <input
               type="mobile"
               id="mobile"
               name="mobile"
               placeholder="Mobile"
               required />
-            <textarea
-              id="message"
-              name="message"
-              placeholder="Your message"
-              required></textarea>
+              <input
+              type="text"
+              id="name"
+              name="name"
+              placeholder="Name"
+              required />
+             <input
+              type="text"
+              id="name"
+              name="name"
+              placeholder="Name"
+              required />  <div class="button-position">
+              <button type="submit">Cancel</button>
+             <button type="submit">Buy now</button>
+           </div>
           </form>
-          <button type="submit">Cancel</button>
-          <button type="submit">Buy now</button>
+        
         </div>
       </section>
     </main>
