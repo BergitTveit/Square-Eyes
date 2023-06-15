@@ -4,55 +4,35 @@ body {
   margin: 0;
   display: grid;
   grid-template-rows: auto 1fr auto;
+  color: #fff;
 }
 
 a {
   color: #ffffff;
   text-decoration: none;
 }
-p {
-  color: #fff;
-}
-header {
+
+header,
+footer {
   display: flex;
   align-items: center;
-  justify-content: space-between;
   padding: 10px;
 }
-
-.logo {
-  margin-left: 50px;
-  width: 200px;
-  height: auto;
+header {
+  justify-content: space-between;
 }
-/*center buttons by browse class */
 .browse {
   flex-grow: 1;
   display: flex;
   justify-content: center;
 }
-
-.search,
-.cart {
-  margin-left: 10px;
-}
-
-header,
 footer {
-  color: #fff;
-}
-
-footer {
-  display: flex;
   flex-direction: column;
-  align-items: center;
   text-align: center;
 }
 footer nav ul {
   list-style: none;
-  padding: 10px;
   margin: 10px;
-  display: flex;
   justify-content: center;
 }
 
@@ -60,7 +40,17 @@ footer nav ul li {
   margin: 0 70px;
 }
 
+.logo {
+  margin-left: 50px;
+  width: 200px;
+  height: auto;
+}
+
 /*CTA sizes*/
+.search,
+.cart {
+  margin-left: 10px;
+}
 
 .cta {
   background-color: rgba(255, 255, 255, 0.05);
@@ -100,6 +90,7 @@ footer nav ul li {
 .banners {
   background-color: rgba(255, 255, 255, 0.05);
   padding: 15px;
+  margin-top: 10px;
   text-transform: uppercase;
 }
 .genrebar {
@@ -109,6 +100,7 @@ footer nav ul li {
   display: flex;
   justify-content: center;
 }
+
 .info-xs {
   float: left;
   display: inline-block;
@@ -167,24 +159,6 @@ nav li {
 .recommandations {
   width: 280px;
 }
-.products {
-  flex-basis: calc(50% - 10px);
-  margin-bottom: 20px;
-  position: relative;
-}
-
-.products .cta {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-}
-.products img {
-  display: block;
-  width: 100%;
-  height: auto;
-}
 
 /* Homepage */
 
@@ -216,6 +190,36 @@ nav li {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
   justify-items: center;
+}
+.discover {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(20px, 1fr));
+  justify-items: center;
+  gap: 20px;
+  margin: 50px;
+}
+.discover img {
+  height: 100%;
+  width: 100%;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.7);
+}
+.products {
+  flex-basis: calc(50% - 10px);
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.products .cta {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+.products img {
+  display: block;
+  width: 100%;
+  height: auto;
 }
 
 /*contact*/
@@ -377,28 +381,4 @@ nav li {
 
 .products img {
   grid-column: -1/1;
-}
-
-@media screen and (max-width: 600px) {
-  header {
-    flex-wrap: wrap;
-  }
-
-  .logo,
-  .search,
-  .cart {
-    margin: 5px;
-  }
-}
-
-@media screen and (max-width: 1024px) {
-  .featured {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media screen and (max-width: 600px) {
-  .featured {
-    grid-template-columns: 1fr;
-  }
 }
