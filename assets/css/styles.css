@@ -307,6 +307,28 @@ nav li {
   float: left;
 }
 
+/*checkout*/
+.checkout {
+  text-align: center;
+  padding: 10px;
+}
+.checkout-content {
+  display: flex;
+  text-align: left;
+  margin: auto;
+}
+.checkout-content div {
+  margin: 50px;
+}
+.button-position {
+  text-align: center;
+}
+.checkout img {
+  height: 300px;
+  padding: 20px;
+  float: left;
+}
+
 /* genre*/
 
 .film-list {
