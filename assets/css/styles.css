@@ -18,12 +18,21 @@ li {
 a {
   color: #ffffff;
   text-decoration: none;
+  letter-spacing: 2px;
 }
-
+img {
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.7);
+}
+.active {
+  font-weight: bold;
+  text-transform: uppercase;
+}
 h1,
-h2 {
+h2,
+h3 {
   text-transform: uppercase;
   display: inline-block;
+  letter-spacing: 2px;
 }
 
 header,
@@ -62,6 +71,7 @@ footer nav ul li {
   margin-left: 50px;
   width: 200px;
   height: auto;
+  box-shadow: none;
 }
 .search,
 .cart {
@@ -75,6 +85,7 @@ footer nav ul li {
   border-radius: 50px;
   box-shadow: 0 10px 15px rgba(0, 0, 0, 0.35);
   padding: 10px;
+  letter-spacing: 2px;
 }
 .cta-img {
   background-color: rgba(255, 255, 255, 0.3);
@@ -113,6 +124,7 @@ footer nav ul li {
   list-style: none;
   display: flex;
   justify-content: center;
+  letter-spacing: 2px;
 }
 
 .genrebar li {
@@ -121,7 +133,7 @@ footer nav ul li {
 
 /* Homepage */
 
-.best-seller-film {
+.best-seller-cover {
   background-image: url("../images/sweetheart.jpeg");
   background-size: cover;
   background-repeat: no-repeat;
@@ -150,33 +162,9 @@ footer nav ul li {
 .discover img {
   height: 100%;
   width: 100%;
-  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.7);
 }
 
-/* genre*/
-
-.products {
-  flex-basis: calc(50% - 10px);
-  margin-bottom: 20px;
-  position: relative;
-  display: grid;
-  grid-template-columns: repeat (6, 20px);
-  grid-template-rows: repeat (1, auto);
-}
-
-.products .cta {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-}
-
-.products-recommandation {
-  display: grid;
-  grid-template-columns: repeat (3, 20px);
-}
-
+/* Film list banner with 6 films, to be made carousel with Java*/
 .film-list {
   display: grid;
   grid-template-columns: repeat(6, minmax(20px, 1fr));
@@ -189,10 +177,27 @@ footer nav ul li {
 .film-list img {
   height: 100%;
   width: 100%;
-  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.7);
+}
+.film {
+  flex-basis: calc(50% - 10px);
+  margin-bottom: 20px;
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat (6, 20px);
+  grid-template-rows: repeat (1, auto);
 }
 
-.film-list-recommandation {
+.film .cta {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+/*Film recommandation banner with 3 films*/
+
+.recommandation-list {
   display: grid;
   grid-template-columns: repeat(3, minmax(20px, 1fr));
   justify-items: center;
@@ -201,10 +206,13 @@ footer nav ul li {
   margin: 50px;
   margin-bottom: 70px;
 }
-.film-list-recommandation img {
+.recommandation-list img {
   height: 100%;
   width: 100%;
-  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.7);
+}
+.film-recommandation {
+  display: grid;
+  grid-template-columns: repeat (3, 20px);
 }
 
 /* Film Details page*/
@@ -217,7 +225,7 @@ footer nav ul li {
 .film-details img {
   height: 80%;
   width: auto;
-  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.7);
+
   float: left;
   margin-right: 50px;
 }
@@ -251,19 +259,19 @@ footer nav ul li {
 
 /*about and checkout*/
 
-.information {
+.info {
   text-align: center;
   padding: 10px;
 }
-.information-content {
+.info-content {
   display: flex;
   text-align: left;
   margin: auto;
 }
-.information-content div {
+.info-content div {
   margin: 50px;
 }
-.information-content img {
+.info-content img {
   height: 100px;
   padding: 80px;
   float: left;
