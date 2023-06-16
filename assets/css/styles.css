@@ -3,6 +3,7 @@ body {
   background-color: #121923;
   margin: 0;
   display: grid;
+
   grid-template-rows: auto 1fr auto;
   color: #fff;
 }
@@ -51,7 +52,11 @@ header {
   display: flex;
   justify-content: center;
 }
-
+.browsestyle {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+}
 footer {
   flex-direction: column;
   text-align: center;
@@ -126,7 +131,13 @@ footer nav ul li {
   justify-content: center;
   letter-spacing: 2px;
 }
-
+.genrestyle {
+  margin: 0 50px;
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  letter-spacing: 2px;
+}
 .genrebar li {
   margin: 0 50px;
 }
@@ -260,6 +271,11 @@ footer nav ul li {
 /*about and checkout*/
 
 .info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-width: 70%;
   text-align: center;
   padding: 10px;
 }
@@ -269,11 +285,107 @@ footer nav ul li {
   margin: auto;
 }
 .info-content div {
-  margin: 50px;
+  margin: 40px;
+}
+.info-content img {
+  height: 100vh;
+  float: left;
+  box-shadow: none;
+}
+
+.info-content div {
+  margin: 20px;
 }
 .info-content img {
   height: 100px;
   padding: 80px;
   float: left;
   box-shadow: none;
+}
+
+.info-content .button-position {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.info-content .button-position a button {
+  background-color: #d17314;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-size: 1em;
+}
+
+@media (max-width: 420px) {
+  header,
+  footer {
+    flex-direction: column;
+  }
+
+  .browse {
+    display: none;
+  }
+
+  .logo {
+    margin-left: 0;
+    margin-bottom: 20px;
+  }
+  .banners {
+    text-align: center;
+  }
+  .genrebar {
+    display: none;
+  }
+  .best-seller-cover {
+    height: 30vh;
+  }
+  .best-seller {
+    height: 30vh;
+  }
+
+  .film-list {
+    grid-template-columns: repeat(2, minmax(20px, 1fr));
+  }
+  .recommandation-list {
+    grid-template-columns: repeat(1, minmax(20px, 1fr));
+  }
+  .discover {
+    grid-template-columns: repeat(1, minmax(20px, 1fr));
+  }
+  .film-details {
+    font-size: 0.7em;
+    margin: 10vh;
+  }
+
+  .price {
+    font-size: 0.8;
+    align-items: center;
+  }
+  .film-details img {
+    height: 30vh;
+  }
+
+  .form {
+    padding: 2%;
+    padding-bottom: 5%;
+    max-width: 90%;
+  }
+
+  .info-content {
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
+  }
+  .info-content img {
+    align-items: center;
+    margin-top: 20px;
+    width: 33.33%;
+    height: auto;
+  }
+  .cta {
+    padding: 15px;
+    font-size: 0.8em;
+  }
 }
