@@ -275,4 +275,5 @@ footer nav ul li {
   height: 100px;
   padding: 80px;
   float: left;
+  box-shadow: none;
 }
