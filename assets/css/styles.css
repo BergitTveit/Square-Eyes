@@ -234,15 +234,26 @@ footer nav ul li {
   height: 80%;
   width: auto;
 }
-
+.film-details-info {
+  display: flex;
+  flex-direction: column;
+}
+.film-details-info2 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
 .button-style1 {
   background-color: #d17314;
   color: #fff;
-
-  padding: 10px 20px;
+  margin-top: auto;
+  align-self: end;
+  margin-bottom: 30%;
+  padding: 20px 50px;
   border-radius: 50px;
+  text-align: center;
   text-decoration: none;
-  font-size: 1em;
+  font-size: 1.5em;
   box-shadow: 0 10px 15px rgba(0, 0, 0, 0.35);
 }
 .price {
