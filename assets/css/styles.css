@@ -6,7 +6,16 @@ body {
   grid-template-rows: auto 1fr auto;
   color: #fff;
 }
-
+.visually-hidden {
+  position: absolute !important;
+  clip: rect(1px, 1px, 1px, 1px);
+  padding: 0 !important;
+  border: 0 !important;
+  height: 1px !important;
+  width: 1px !important;
+  overflow: hidden;
+  white-space: nowrap;
+}
 nav {
   margin-left: 25px;
 }
@@ -331,6 +340,7 @@ footer nav ul li {
   color: #d17314;
   padding: 10px 20px;
   border-radius: 50px;
+  font-weight: bold;
   text-decoration: none;
   font-size: 0.8em;
   box-shadow: 0 10px 15px rgba(0, 0, 0, 0.35);
