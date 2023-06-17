@@ -304,6 +304,7 @@ footer nav ul li {
   display: flex;
   text-align: left;
   margin: auto;
+  align-items: center;
 }
 .info-content div {
   margin: 40px;
