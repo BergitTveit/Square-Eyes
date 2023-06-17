@@ -336,7 +336,7 @@ footer nav ul li {
   box-shadow: 0 10px 15px rgba(0, 0, 0, 0.35);
 }
 
-@media (max-width: 420px) {
+@media (max-width: 430px) {
   header,
   footer {
     flex-direction: column;
