@@ -233,11 +233,20 @@ footer nav ul li {
 .film-details img {
   height: 80%;
   width: auto;
-
   float: left;
   margin-right: 50px;
 }
 
+.button-style1 {
+  background-color: #d17314;
+  color: #fff;
+
+  padding: 10px 20px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-size: 1em;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.35);
+}
 .price {
   float: right;
   display: inline-block;
