@@ -377,8 +377,21 @@ footer nav ul li {
     grid-template-columns: repeat(1, minmax(20px, 1fr));
   }
   .film-details {
+    display: flex;
     font-size: 0.7em;
     margin: 10vh;
+
+    align-items: center;
+  }
+  .film-details p {
+    align-items: center;
+    margin: 0;
+    margin-top: 10px;
+  }
+  .film-details a {
+    align-items: center;
+    margin: 0;
+    margin-top: 10px;
   }
 
   .price {
