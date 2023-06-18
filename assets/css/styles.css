@@ -379,10 +379,53 @@ h3 {
   font-weight: bold;
   box-shadow: 0 10px 15px rgba(0, 0, 0, 0.35);
 }
-@media min-width(1025) {
+@media (min-width: 1025px) {
+  .button-mobile {
+    display: none;
+  }
 }
 
-@media min-width(481-1024) {
+@media (min-width: 481px) and (max-width: 1024px) {
+  header .browse {
+    display: none;
+  }
+
+  .film-list {
+    grid-template-columns: repeat(4, minmax(20px, 1fr));
+  }
+
+  .discover {
+    grid-template-columns: repeat(2, minmax(20px, 1fr));
+  }
+  .best-seller-cover {
+    width: 100%;
+  }
+  .best-seller {
+    height: 30vh;
+  }
+  .film-details {
+    display: flex;
+    align-items: center;
+  }
+
+  .film-details p {
+    align-items: center;
+    margin: 0;
+  }
+  .film-details a {
+    align-items: center;
+    margin: 2px;
+    margin-top: 10px;
+  }
+  .film-details .button-style1 {
+    display: flex;
+    align-self: end;
+    margin-top: 20px;
+  }
+
+  .button-style {
+    display: none;
+  }
 }
 @media (max-width: 480px) {
   footer nav ul {
