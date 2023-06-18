@@ -16,8 +16,27 @@ body {
   overflow: hidden;
   white-space: nowrap;
 }
-nav {
-  margin-left: 25px;
+
+header nav {
+  display: flex;
+  width: 100%;
+  align-items: center;
+}
+
+.browse {
+  flex-grow: 1;
+  text-align: center;
+}
+.logo {
+  margin-left: 50px;
+  box-shadow: none;
+  width: 200px;
+}
+.margin-s {
+  margin-right: 10px;
+}
+.login {
+  margin-right: 50px;
 }
 
 li {
@@ -55,11 +74,6 @@ header {
   justify-content: space-between;
 }
 
-.browse {
-  flex-grow: 1;
-  display: flex;
-  justify-content: center;
-}
 .browsestyle {
   flex-grow: 1;
   display: flex;
@@ -78,17 +92,6 @@ footer nav ul {
 
 footer nav ul li {
   margin: 0 70px;
-}
-
-.logo {
-  margin-left: 50px;
-  width: 200px;
-  height: auto;
-  box-shadow: none;
-}
-.search,
-.cart {
-  margin-left: 10px;
 }
 
 /*CTA sizes*/
@@ -338,6 +341,7 @@ footer nav ul li {
 
 .color {
   color: #d17314;
+  margin-left: 10px;
 }
 .header-button {
   color: #e27100;
