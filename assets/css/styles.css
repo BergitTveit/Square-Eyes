@@ -368,38 +368,42 @@ h3 {
   font-size: 0.8em;
   box-shadow: 0 10px 15px rgba(0, 0, 0, 0.35);
 }
+.button-mobile {
+  background-color: #d17314;
+  color: #fff;
+  padding: 10px;
+  border-radius: 50px;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 1em;
+  font-weight: bold;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.35);
+}
 
 @media (max-width: 430px) {
-  header,
-  footer {
+  footer nav ul {
     display: flex;
     flex-direction: column;
+    justify-content: space-around;
     align-items: center;
-  }
-
-  footer nav {
-    margin: 0;
-  }
-
-  footer nav ul {
-    padding: 0;
     list-style: none;
+    padding: 0;
   }
 
-  footer nav li {
+  }
+  h2 {
+    font-size: 1em;
+  }
+  header nav {
     display: flex;
-    align-items: center;
-    margin-bottom: 10px;
+    flex-direction: column;
   }
 
   header a {
     display: flex;
-
     margin-top: 10px;
   }
-  header .browse {
-    display: none;
-  }
+
   .logo {
     margin-left: 0;
     margin-bottom: 20px;
@@ -457,6 +461,9 @@ h3 {
   }
   .film-details img {
     height: 30vh;
+  }
+  .button-style {
+    display: none;
   }
 
   .form {
