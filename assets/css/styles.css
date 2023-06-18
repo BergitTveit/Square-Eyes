@@ -17,6 +17,10 @@ body {
   white-space: nowrap;
 }
 
+img {
+  height: 100%;
+  width: auto;
+}
 header nav {
   display: flex;
   width: 100%;
