@@ -77,7 +77,16 @@ h3 {
   display: inline-block;
   letter-spacing: 2px;
 }
-
+.header-button {
+  color: var(--accent-col);
+  padding: 10px 20px;
+  border-radius: 50px;
+  font-weight: bold;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 0.8em;
+  box-shadow: 0 10px 15px var(--cta-shadow);
+}
 header,
 footer {
   display: flex;
@@ -109,7 +118,7 @@ footer nav ul li {
   margin: 0 70px;
 }
 
-/*CTA sizes*/
+/*CTA sizes and styling*/
 .cta {
   background-color: var(--cta-col);
   text-transform: uppercase;
@@ -118,28 +127,33 @@ footer nav ul li {
   padding: 10px;
   letter-spacing: 2px;
 }
+
 .cta-img {
   background-color: var(--cta-img-col);
 }
+
 .cta-best-seller {
-  padding: 30px;
-  padding-left: 50px;
-  padding-right: 50px;
+  padding: 30px 50px;
 }
+
 .cta-xs {
   font-size: 0.8em;
-  padding-left: 20px;
-  padding-right: 20px;
+  padding: 10px 20px;
 }
+
 .cta-s {
-  padding: 15px;
-  padding-left: 30px;
-  padding-right: 30px;
+  padding: 15px 30px;
 }
+
 .cta-l {
-  padding-left: 150px;
-  padding-right: 150px;
+  padding: 15px 150px;
 }
+.color {
+  color: var(--accent-col);
+  margin-left: 10px;
+  box-shadow: 0 7px 7px var(--cta-header-col);
+}
+
 .cta-center {
   text-align: center;
 }
@@ -159,13 +173,7 @@ footer nav ul li {
   flex-wrap: wrap;
   padding-left: 0;
 }
-.genrestyle {
-  margin: 0 50px;
-  list-style: none;
-  display: flex;
-  justify-content: center;
-  letter-spacing: 2px;
-}
+
 .genrebar li {
   margin: 0 50px;
 }
@@ -196,11 +204,18 @@ footer nav ul li {
   margin: 50px;
 }
 .discover img {
-  height: 100%;
   width: 100%;
 }
+/*change to discover cta*/
+.film .cta {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
 
-/* Film list banner with 6 films, to be made carousel with Java*/
+/* Film list banner with 6 films and recommendation list*/
 .film-list {
   display: grid;
   grid-template-columns: repeat(6, minmax(20px, 1fr));
@@ -211,7 +226,6 @@ footer nav ul li {
   margin-bottom: 70px;
 }
 .film-list img {
-  height: 100%;
   width: 100%;
 }
 .film {
@@ -223,32 +237,11 @@ footer nav ul li {
   grid-template-rows: repeat (1, auto);
 }
 
-.film .cta {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-}
-
-/*Film recommandation banner with 3 films*/
-
-.recommandation-list {
-  display: grid;
+.recommendations {
   grid-template-columns: repeat(3, minmax(20px, 1fr));
-  justify-items: center;
-  gap: 20px;
-  row-gap: 50px;
-  margin: 50px;
-  margin-bottom: 70px;
 }
-.recommandation-list img {
-  height: 100%;
+.recommendations img {
   width: 100%;
-}
-.film-recommandation {
-  display: grid;
-  grid-template-columns: repeat (3, 20px);
 }
 
 /* Film Details page*/
@@ -289,8 +282,9 @@ footer nav ul li {
   text-align: center;
   text-decoration: none;
   font-size: 1.5em;
-  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.35);
+  box-shadow: 0 10px 15px var(--cta-header-col);
 }
+
 .price {
   float: right;
   display: inline-block;
@@ -304,8 +298,8 @@ footer nav ul li {
 
 /*CONTACT*/
 .form {
-  background-color: rgba(255, 255, 255, 0.05);
-  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.7);
+  background-color: var(--cta-col);
+  box-shadow: 0 10px 15px var(--img-shadow);
   padding: 50px;
   max-width: 500px;
   margin: auto;
@@ -316,7 +310,15 @@ footer nav ul li {
 h3 {
   color: var(--accent-col);
 }
-
+.button-style {
+  background-color: var(--accent-col);
+  color: var(--text-col);
+  padding: 10px 30px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-size: 1.5em;
+  box-shadow: 0 10px 15px var(--cta-shadow);
+}
 /*about and checkout*/
 
 .info {
@@ -353,32 +355,6 @@ h3 {
   box-shadow: none;
 }
 
-.button-style {
-  background-color: var(--accent-col);
-  color: var(--text-col);
-  padding: 10px 30px;
-  border-radius: 50px;
-  text-decoration: none;
-  font-size: 1.5em;
-  box-shadow: 0 10px 15px var(--cta-shadow);
-}
-
-.color {
-  color: var(--accent-col);
-
-  margin-left: 10px;
-  box-shadow: 0 7px 7px var(--cta-header-col);
-}
-.header-button {
-  color: var(--accent-col);
-  padding: 10px 20px;
-  border-radius: 50px;
-  font-weight: bold;
-  text-decoration: none;
-  text-transform: uppercase;
-  font-size: 0.8em;
-  box-shadow: 0 10px 15px var(--cta-shadow);
-}
 .button-mobile {
   background-color: var(--accent-col);
   color: var(--text-col);
@@ -424,13 +400,20 @@ h3 {
     margin: 2px;
     margin-top: 10px;
   }
+  .film-list {
+    grid-template-columns: repeat(4, minmax(20px, 1fr));
+  }
+  .recommendations {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(20px, 1fr));
+  }
   .film-details .button-style1 {
     display: flex;
     align-self: end;
     margin-top: 20px;
   }
 
-  .button-style {
+  .button-mobile {
     display: none;
   }
 }
@@ -478,7 +461,7 @@ h3 {
   .film-list {
     grid-template-columns: repeat(2, minmax(20px, 1fr));
   }
-  .recommandation-list {
+  .recommendations {
     grid-template-columns: repeat(1, minmax(20px, 1fr));
   }
   .discover {
@@ -489,7 +472,6 @@ h3 {
     flex-direction: column;
     font-size: 0.7em;
     margin: 10vh;
-
     align-items: center;
   }
 
