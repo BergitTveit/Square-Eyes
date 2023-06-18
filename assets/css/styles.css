@@ -289,7 +289,8 @@ footer nav ul li {
   display: flex;
 }
 
-.form h3 {
+.form h2,
+h3 {
   color: #d17314;
 }
 
@@ -341,7 +342,9 @@ footer nav ul li {
 
 .color {
   color: #d17314;
+
   margin-left: 10px;
+  box-shadow: 0 7px 7px rgba(184, 107, 35, 0.35);
 }
 .header-button {
   color: #e27100;
