@@ -379,8 +379,12 @@ h3 {
   font-weight: bold;
   box-shadow: 0 10px 15px rgba(0, 0, 0, 0.35);
 }
+@media min-width(1025) {
+}
 
-@media (max-width: 430px) {
+@media min-width(481-1024) {
+}
+@media (max-width: 480px) {
   footer nav ul {
     display: flex;
     flex-direction: column;
@@ -390,7 +394,6 @@ h3 {
     padding: 0;
   }
 
-  }
   h2 {
     font-size: 1em;
   }
