@@ -1,10 +1,21 @@
 body {
   font-family: "Roboto Mono", Verdana, Geneva, Tahoma, sans-serif;
-  background-color: #121923;
+  background-color: var(--main-col);
   margin: 0;
   display: grid;
   grid-template-rows: auto 1fr auto;
-  color: #fff;
+  color: var(--text-col);
+}
+:root {
+  --main-col: #1b1e41;
+  --text-col: #fff;
+  --accent-col: #ff6600;
+  --img-shadow: rgba(0, 0, 0, 0.7);
+  --cta-col: rgba(255, 255, 255, 0.05);
+  --cta-img-col: rgba(255, 255, 255, 0.3);
+  --cta-shadow: rgba(0, 0, 0, 0.35);
+  --banners-col: rgba(255, 255, 255, 0.05);
+  --cta-header-col: rgba(184, 107, 35, 0.35);
 }
 .visually-hidden {
   position: absolute !important;
@@ -48,12 +59,12 @@ li {
 }
 
 a {
-  color: #ffffff;
+  color: var(--text-col);
   text-decoration: none;
   letter-spacing: 2px;
 }
 img {
-  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.7);
+  box-shadow: 0 10px 15px var(--img-shadow);
 }
 .active {
   font-weight: bold;
@@ -100,15 +111,15 @@ footer nav ul li {
 
 /*CTA sizes*/
 .cta {
-  background-color: rgba(255, 255, 255, 0.05);
+  background-color: var(--cta-col);
   text-transform: uppercase;
   border-radius: 50px;
-  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.35);
+  box-shadow: 0 10px 15px var(--cta-shadow);
   padding: 10px;
   letter-spacing: 2px;
 }
 .cta-img {
-  background-color: rgba(255, 255, 255, 0.3);
+  background-color: var(--cta-img-col);
 }
 .cta-best-seller {
   padding: 30px;
@@ -134,7 +145,7 @@ footer nav ul li {
 }
 /* Banners and bars */
 .banners {
-  background-color: rgba(255, 255, 255, 0.05);
+  background-color: var(--banners-col);
   padding: 15px;
   margin-top: 10px;
   text-transform: uppercase;
@@ -268,8 +279,8 @@ footer nav ul li {
   width: 100%;
 }
 .button-style1 {
-  background-color: #d17314;
-  color: #fff;
+  background-color: var(--accent-col);
+  color: var(--text-col);
   margin-top: auto;
   align-self: end;
   margin-bottom: 30%;
@@ -303,7 +314,7 @@ footer nav ul li {
 
 .form h2,
 h3 {
-  color: #d17314;
+  color: var(--accent-col);
 }
 
 /*about and checkout*/
@@ -343,41 +354,41 @@ h3 {
 }
 
 .button-style {
-  background-color: #d17314;
-  color: #fff;
+  background-color: var(--accent-col);
+  color: var(--text-col);
   padding: 10px 30px;
   border-radius: 50px;
   text-decoration: none;
   font-size: 1.5em;
-  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.35);
+  box-shadow: 0 10px 15px var(--cta-shadow);
 }
 
 .color {
-  color: #d17314;
+  color: var(--accent-col);
 
   margin-left: 10px;
-  box-shadow: 0 7px 7px rgba(184, 107, 35, 0.35);
+  box-shadow: 0 7px 7px var(--cta-header-col);
 }
 .header-button {
-  color: #e27100;
+  color: var(--accent-col);
   padding: 10px 20px;
   border-radius: 50px;
   font-weight: bold;
   text-decoration: none;
   text-transform: uppercase;
   font-size: 0.8em;
-  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.35);
+  box-shadow: 0 10px 15px var(--cta-shadow);
 }
 .button-mobile {
-  background-color: #d17314;
-  color: #fff;
+  background-color: var(--accent-col);
+  color: var(--text-col);
   padding: 10px;
   border-radius: 50px;
   text-decoration: none;
   text-transform: uppercase;
   font-size: 1em;
   font-weight: bold;
-  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.35);
+  box-shadow: 0 10px 15px var(--cta-shadow);
 }
 @media (min-width: 1025px) {
   .button-mobile {
@@ -386,10 +397,6 @@ h3 {
 }
 
 @media (min-width: 481px) and (max-width: 1024px) {
-  header .browse {
-    display: none;
-  }
-
   .film-list {
     grid-template-columns: repeat(4, minmax(20px, 1fr));
   }
