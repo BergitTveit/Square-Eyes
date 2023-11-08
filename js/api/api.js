@@ -29,3 +29,10 @@ export async function fetchFilm(id) {
     console.log("There was an error with apicall", error);
   }
 }
+
+export async function fetchFilmsSortedByRaiting(amount) {
+  let films = await fetchAllFilms();
+  films.sort((film1, film2) => film2.rating - film1.rating);
+
+  return films.slice(0, amount);
+}

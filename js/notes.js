@@ -56,7 +56,7 @@ async function main() {
   }
 }
 
-main();
+// main();
 
 //FIRST CODE FOR FILMS RENDERING PAGE
 // export async function displayFilms(films) {
