@@ -1,5 +1,6 @@
-import { url } from "./constants.js";
-const resultsContainer = document.querySelector(".film-list");
+import { fetchFilm } from "./post.js";
+
+const resultsContainer = document.querySelector(".film-details");
 
 export async function filmDetailpage() {
   try {
