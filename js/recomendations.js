@@ -1,4 +1,4 @@
-import { fetchAllFilms } from "./api/api.js";
+import { fetchFilmsSortedByRaiting } from "./api/api.js";
 import { displayFilms } from "./render/list.js";
 
 export async function displayRecommendedFilms(film) {
@@ -19,7 +19,7 @@ async function main() {
   try {
     let sortedFilms = await fetchFilmsSortedByRaiting(3);
 
-    displayFilms(sortedFilms);
+    displayFilms(sortedFilms, ".recommendations");
   } catch (error) {
     console.error("An error occurred in the main function", error);
   }
