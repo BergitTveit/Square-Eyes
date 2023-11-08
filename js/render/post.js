@@ -1,4 +1,8 @@
 export async function displayFilmDetails(film) {
+  const filmDetailsContainer = document.querySelector(".film-details");
+  const filmTitle = document.querySelector(".film-title");
+  const filmDetails = document.querySelector(".film-info");
+
   const filmElement = document.createElement("a");
   filmElement.href = "/film/?id=" + film.id;
   filmElement.class = "film-link";
@@ -8,7 +12,8 @@ export async function displayFilmDetails(film) {
   img.alt = film.title;
 
   filmElement.append(img);
+  filmDetailsContainer.prepend(filmElement);
 
-  const filmDetailsContainer = document.querySelector(".film-details");
-  filmDetailsContainer.append(filmElement);
+  filmTitle.textContent = film.title;
+  filmDetails.textContent = film.description;
 }
