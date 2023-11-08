@@ -1,5 +1,5 @@
-import { fetchAllFilms } from "./post.js";
-import { displayFilms } from "./render/post.js";
+import { fetchAllFilms } from "./api/api.js";
+import { displayFilms } from "./render/list.js";
 
 export async function filmspage() {
   try {

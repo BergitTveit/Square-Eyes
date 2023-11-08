@@ -1,16 +1,14 @@
-const resultsContainer = document.querySelector(".film-list");
+export async function displayFilmDetails(film) {
+  const filmElement = document.createElement("a");
+  filmElement.href = "/film/?id=" + film.id;
+  filmElement.class = "film-link";
 
-export async function displayFilm(film) {
-  resultsContainer.innerHTML += `<a href="/film/?id=${film.id}" class="film-link">
-                                      <div class="film">
-                                      <img src="${film.image}" alt="${film.title}" />
-                                      <h4>${film.title}</h4>
-                                      </div>
-                                      </a>
-                                      `;
-}
+  const img = document.createElement("img");
+  img.src = film.image;
+  img.alt = film.title;
 
-export function displayFilms(filmList) {
-  resultsContainer.innerHTML = "";
-  filmList.forEach(displayFilm);
+  filmElement.append(img);
+
+  const filmDetailsContainer = document.querySelector(".film-details");
+  filmDetailsContainer.append(filmElement);
 }

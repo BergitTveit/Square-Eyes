@@ -1,4 +1,4 @@
-import { url } from "./constants.js";
+import { url } from "../constants.js";
 
 export async function fetchAllFilms() {
   try {
