@@ -288,7 +288,7 @@ footer nav ul li {
   box-shadow: 0 10px 15px var(--cta-header-col);
 }
 
-.price {
+/* .price {
   float: right;
   display: inline-block;
   font-size: 1.5em;
@@ -297,7 +297,7 @@ footer nav ul li {
 .info-xs {
   float: left;
   display: inline-block;
-}
+} */
 
 /*CONTACT*/
 .form {
