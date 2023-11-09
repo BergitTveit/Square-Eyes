@@ -1,4 +1,4 @@
-const resultsContainer = document.querySelector(".film-list");
+// const resultsContainer = document.querySelector(".film-list");
 
 export async function displayFilm(film, displaySectionName) {
   const displayContainer = document.querySelector(displaySectionName);

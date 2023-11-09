@@ -5,13 +5,14 @@ export async function fetchAllFilms() {
     const response = await fetch(url);
 
     if (!response.ok) {
-      throw new Error("Null");
+      throw new Error("Failed to fetch films. Status:", +response.status);
     }
     const films = await response.json();
     console.log(films);
     return films;
   } catch (error) {
-    console.log("There was an error with apicall", error);
+    console.log("There was an error in fetchAllFilms:", error);
+    throw error;
   }
 }
 
@@ -20,13 +21,14 @@ export async function fetchFilm(id) {
     const response = await fetch(url + id);
 
     if (!response.ok) {
-      throw new Error("Null");
+      throw new Error("Failed to fetch film details. Status:", response.status);
     }
     const film = await response.json();
 
     return film;
   } catch (error) {
-    console.log("There was an error with apicall", error);
+    console.log("There was an error in fetchFilm:", error);
+    throw error;
   }
 }
 
@@ -43,10 +45,3 @@ export async function fetchFilmsSortedByReleased(amount) {
 
   return films.slice(0, amount);
 }
-
-// export async function bestSeller (bestFilm){
-// let films = fetchAllFilms();
-
-// //
-// if (films === bestFilm.title)
-// }
