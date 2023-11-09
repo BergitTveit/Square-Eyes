@@ -36,3 +36,17 @@ export async function fetchFilmsSortedByRaiting(amount) {
 
   return films.slice(0, amount);
 }
+
+export async function fetchFilmsSortedByReleased(amount) {
+  let films = await fetchAllFilms();
+  films.sort((film1, film2) => film2.released - film1.released);
+
+  return films.slice(0, amount);
+}
+
+// export async function bestSeller (bestFilm){
+// let films = fetchAllFilms();
+
+// //
+// if (films === bestFilm.title)
+// }

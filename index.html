@@ -11,7 +11,9 @@
 
     <title>Square Eyes | Film streaming from independent makers.</title>
     <link href="assets/css/styles.css" rel="stylesheet" />
-    <script type="module" src="js/index.js"></script>
+    <script type="module" src="../js/films.js" defer></script>
+    <script type="module" src="../js/recomendations.js" defer></script>
+    <script type="module" src="../js/bestseller.js" defer></script>
   </head>
   <body>
     <header>
@@ -44,9 +46,7 @@
     <main>
       <section class="best-seller-cover">
         <div class="best-seller">
-          <a href="film/index.html"
-            ><h1 class="cta cta-img cta-best-seller">Best Seller</h1></a
-          >
+          <!-- <img src="" alt="" id="bestimage" /> -->
         </div>
       </section>
 
@@ -54,27 +54,7 @@
         <div class="banners">
           <h2>MOST POPULAR</h2>
         </div>
-        <div class="film-list recommendations">
-          <div>
-            <a href="film/index.html">
-              <img
-                src="../assets/images/batman_unmask-the-truth.jpeg"
-                alt="Batman, unmask the truth."
-            /></a>
-          </div>
-          <div>
-            <a href="films/sweetheart.html">
-              <img src="../assets/images/toy-story_4.jpeg" alt="Toy Story 4."
-            /></a>
-          </div>
-          <div>
-            <a href="films/sweetheart.html">
-              <img
-                src="../assets/images/hobbs-and-shaw.jpeg"
-                alt="Hobbs and shaw."
-            /></a>
-          </div>
-        </div>
+        <div class="recommendations"></div>
       </section>
 
       <section>
