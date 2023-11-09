@@ -7,7 +7,7 @@ export async function displayFilmDetails(film) {
 
   const filmElement = document.createElement("a");
   filmElement.href = "/film/?id=" + film.id;
-  // filmElement.className = "film-link";
+  filmElement.className = "film-link";
 
   const img = document.createElement("img");
   img.src = film.image;
