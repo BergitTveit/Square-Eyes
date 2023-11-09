@@ -3,7 +3,7 @@ import { url } from "../constants.js";
 export async function fetchAllFilms() {
   try {
     const response = await fetch(url);
-
+    console.log(url);
     if (!response.ok) {
       throw new Error("Failed to fetch films. Status:", +response.status);
     }
