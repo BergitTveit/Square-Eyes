@@ -3,11 +3,7 @@ import { displayFilmDetails } from "./render/post.js";
 
 export async function updatePageTitle(filmId) {
   try {
-    console.log("updating page title");
-
     const film = await fetchFilm(filmId);
-
-    console.log("fetched film data", film);
 
     if (film && film.title) {
       document.title = film.title;
@@ -27,8 +23,6 @@ document.addEventListener("click", async (event) => {
   }
 });
 
-// updatePageTitle();
-
 const resultsContainer = document.querySelector(".film-details");
 
 export async function filmDetailPage() {
@@ -39,7 +33,6 @@ export async function filmDetailPage() {
     const film = await fetchFilm(id);
 
     displayFilmDetails(film);
-    console.log("FILM info  ", film);
   } catch (error) {
     console.error("An error occurred in the main function", error);
   }

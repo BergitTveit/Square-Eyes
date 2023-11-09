@@ -12,7 +12,7 @@ export async function displayRecommendedFilms(film) {
   img.src = film.image;
   img.alt = film.title;
 
-  // recommendedContainer.append();
+  recommendedContainer.append(); //Check this??
 }
 
 async function main() {

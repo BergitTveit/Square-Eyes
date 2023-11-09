@@ -8,10 +8,10 @@ export async function fetchAllFilms() {
       throw new Error("Failed to fetch films. Status:", +response.status);
     }
     const films = await response.json();
-    console.log(films);
+
     return films;
   } catch (error) {
-    console.log("There was an error in fetchAllFilms:", error);
+    console.log("There was an error in fetchAllFilms:", error); //create error message function instead
     throw error;
   }
 }
@@ -27,7 +27,7 @@ export async function fetchFilm(id) {
 
     return film;
   } catch (error) {
-    console.log("There was an error in fetchFilm:", error);
+    console.log("There was an error in fetchFilm:", error); //create error message function instead
     throw error;
   }
 }
