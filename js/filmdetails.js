@@ -23,7 +23,7 @@ document.addEventListener("click", async (event) => {
   if (event.target.classList.contains("film-link")) {
     const filmId = event.target.href.split("/film/?id=")[1];
 
-    await updatePageTitle(filmID);
+    await updatePageTitle(filmId);
   }
 });
 
