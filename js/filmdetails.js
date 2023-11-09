@@ -27,7 +27,7 @@ document.addEventListener("click", async (event) => {
   }
 });
 
-updatePageTitle();
+// updatePageTitle();
 
 const resultsContainer = document.querySelector(".film-details");
 
