@@ -23,8 +23,6 @@ document.addEventListener("click", async (event) => {
   }
 });
 
-const resultsContainer = document.querySelector(".film-details");
-
 export async function filmDetailPage() {
   try {
     const url = new URL(location.href);
