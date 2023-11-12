@@ -1,9 +1,6 @@
 import { fetchFilm } from "../api/api.js";
 import { displayFilmDetails } from "../render/post.js";
-import {
-  handleError,
-  handleErrorByNavigationToHomepage,
-} from "../api/errorhandler.js";
+import { handleError } from "../api/errorhandler.js";
 
 export async function updatePageTitle(filmId) {
   try {
