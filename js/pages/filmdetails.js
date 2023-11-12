@@ -12,8 +12,8 @@ export async function updatePageTitle(filmId) {
       throw new Error("Film data or Title is undefined");
     }
   } catch (error) {
-    console.log("Error; Fail to fetch film details", error);
-    handleErrorByNavigationToHomepage(error);
+    document.title = "ERROR: can not fetch titile";
+    console.error("Error: can not fetch titile", error);
   }
 }
 
