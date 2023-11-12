@@ -1,6 +1,9 @@
 import { fetchFilm } from "../api/api.js";
 import { displayFilmDetails } from "../render/post.js";
-import { handleErrorByNavigationToHomepage } from "../api/errorhandler.js";
+import {
+  handleError,
+  handleErrorByNavigationToHomepage,
+} from "../api/errorhandler.js";
 
 export async function updatePageTitle(filmId) {
   try {
@@ -26,6 +29,7 @@ document.addEventListener("click", async (event) => {
 });
 
 export async function filmDetailPage() {
+  const filmDetailsContainer = document.querySelector(".film-details");
   try {
     const url = new URL(location.href);
     const id = url.searchParams.get("id");
@@ -34,7 +38,9 @@ export async function filmDetailPage() {
 
     displayFilmDetails(film);
   } catch (error) {
-    console.error("An error occurred in the main function", error);
+    filmDetailsContainer.innerHTML = handleError(
+      "Unable to fetch film details."
+    );
   }
 }
 

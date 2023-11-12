@@ -17,19 +17,14 @@ export async function fetchAllFilms() {
 }
 
 export async function fetchFilm(id) {
-  try {
-    const response = await fetch(url + id);
+  const response = await fetch(url + id);
 
-    if (!response.ok) {
-      throw new Error("Failed to fetch film details. Status:", response.status);
-    }
-    const film = await response.json();
-
-    return film;
-  } catch (error) {
-    console.log("There was an error in fetchFilm:", error); //create error message function instead
-    throw error;
+  if (!response.ok) {
+    throw new Error("Failed to fetch film details. Status:", response.status);
   }
+  const film = await response.json();
+
+  return film;
 }
 
 export async function fetchFilmsSortedByRaiting(amount) {
