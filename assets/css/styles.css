@@ -50,6 +50,12 @@ body {
     transform: rotate(360deg);
   }
 }
+
+.error {
+  border: 1px;
+  color: darkred;
+}
+
 /* img {
   height: 100%;
   width: auto;
