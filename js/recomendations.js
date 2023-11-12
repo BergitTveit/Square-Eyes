@@ -21,7 +21,7 @@ async function main() {
 
     displayFilms(sortedFilms, ".recommendations");
   } catch (error) {
-    console.error("An error occurred in the main function", error);
+    console.error("Error: An error occurred during displaying films", error);
   }
 }
 

@@ -2,8 +2,10 @@ import { fetchAllFilms } from "../api/api.js";
 import { displayFilms } from "../render/list.js";
 import { showLoader, hideLoader } from "../loader.js";
 import { fetchFilmsAccordingToSearch } from "../api/search.js";
+import { handleError } from "../api/errorhandler.js";
 
 export async function filmsPage() {
+  const filmListContainer = document.querySelector(".film-list");
   try {
     showLoader();
 
@@ -23,7 +25,7 @@ export async function filmsPage() {
     displayFilms(films, ".film-list");
   } catch (error) {
     hideLoader();
-    console.error("An error occurred in the main function", error);
+    filmListContainer.innerHTML = handleError(" Unable to load film page");
   }
 }
 

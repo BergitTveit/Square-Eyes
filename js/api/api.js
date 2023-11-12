@@ -1,26 +1,21 @@
 import { url } from "../constants.js";
 
 export async function fetchAllFilms() {
-  try {
-    const response = await fetch(url);
+  const response = await fetch(url);
 
-    if (!response.ok) {
-      throw new Error("Failed to fetch films. Status:", response.status);
-    }
-    const films = await response.json();
-
-    return films;
-  } catch (error) {
-    console.log("There was an error in fetchAllFilms:", error); //create error message function instead
-    throw error;
+  if (!response.ok) {
+    throw new Error("Failed to fetch films. Status:", response.status);
   }
+  const films = await response.json();
+
+  return films;
 }
 
 export async function fetchFilm(id) {
   const response = await fetch(url + id);
 
   if (!response.ok) {
-    throw new Error("Failed to fetch film details. Status:", response.status);
+    throw new Error("Failed to fetch film Status:", response.status);
   }
   const film = await response.json();
 
