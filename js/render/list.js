@@ -19,7 +19,6 @@ export async function displayFilm(film, displaySectionName) {
 }
 
 export function displayFilms(filmList, displaySectionName) {
-  console.log("DISPLAY FILMS LIST:", filmList);
   filmList.forEach((film) => {
     displayFilm(film, displaySectionName);
   });

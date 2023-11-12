@@ -1,7 +1,7 @@
-import { fetchAllFilms } from "./api/api.js";
-import { displayFilms } from "./render/list.js";
-import { showLoader, hideLoader } from "./loader.js";
-import { fetchFilmsAccordingToSearch } from "./search.js";
+import { fetchAllFilms } from "../api/api.js";
+import { displayFilms } from "../render/list.js";
+import { showLoader, hideLoader } from "../loader.js";
+import { fetchFilmsAccordingToSearch } from "../api/search.js";
 
 export async function filmsPage() {
   try {

@@ -1,5 +1,6 @@
-import { fetchFilm } from "./api/api.js";
-import { displayFilmDetails } from "./render/post.js";
+import { fetchFilm } from "../api/api.js";
+import { displayFilmDetails } from "../render/post.js";
+import { handleErrorByNavigationToHomepage } from "../api/errorhandler.js";
 
 export async function updatePageTitle(filmId) {
   try {
@@ -8,10 +9,11 @@ export async function updatePageTitle(filmId) {
     if (film && film.title) {
       document.title = film.title;
     } else {
-      console.log("Film data or Title is undefined");
+      throw new Error("Film data or Title is undefined");
     }
   } catch (error) {
     console.log("Error; Fail to fetch film details", error);
+    handleErrorByNavigationToHomepage(error);
   }
 }
 

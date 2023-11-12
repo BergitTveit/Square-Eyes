@@ -1,5 +1,5 @@
-import { fetchAllFilms } from "./api/api.js";
-import { displayFilms } from "./render/list.js";
+import { fetchAllFilms } from "./api.js";
+import { displayFilms } from "../render/list.js";
 
 const search = document.querySelector("#searchInput");
 
