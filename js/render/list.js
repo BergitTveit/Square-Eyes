@@ -1,21 +1,34 @@
+import { addToCart } from "../pages/store";
+
 export async function displayFilm(film, displaySectionName) {
   const displayContainer = document.querySelector(displaySectionName);
+
+  const filmElements = document.createElement("div");
+  filmElements.classList.add("film-item");
 
   const filmElement = document.createElement("a");
   filmElement.href = "/film/?id=" + film.id;
 
   const img = document.createElement("img");
-
   img.src = film.image;
   img.alt = film.title;
-
-  filmElement.append(img);
 
   const title = document.createElement("h4");
   title.textContent = film.title;
 
-  filmElement.append(title);
-  displayContainer.append(filmElement);
+  const addToCartBtn = document.createElement("button");
+  addToCartBtn.textContent = "Add to cart";
+  addToCartBtn.classList.add("button-style1");
+  addToCartBtn.addEventListener(`click`, () => {
+    console.log(film.title);
+    alert("button clicked", film.title);
+
+    addToCart(film);
+  });
+
+  filmElement.append(img);
+  filmElements.append(filmElement, title, addToCartBtn);
+  displayContainer.append(filmElements);
 }
 
 export function displayFilms(filmList, displaySectionName) {

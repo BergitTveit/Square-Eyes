@@ -34,8 +34,7 @@ body {
   font-family: "Roboto Mono", Verdana, Geneva, Tahoma, sans-serif;
   background-color: var(--main-col);
   margin: 0;
-  /* display: grid;
-  grid-template-rows: auto 1fr auto; */
+
   color: var(--text-col);
 }
 :root {
@@ -49,21 +48,6 @@ body {
   --banners-col: rgba(255, 255, 255, 0.05);
   --cta-header-col: rgba(184, 107, 35, 0.35);
 }
-/* .visually-hidden {
-  position: absolute !important;
-  clip: rect(1px, 1px, 1px, 1px);
-  padding: 0 !important;
-  border: 0 !important;
-  height: 1px !important;
-  width: 1px !important;
-  overflow: hidden;
-  white-space: nowrap;
-} */
-
-/* img {
-  height: 100%;
-  width: auto;
-}*/
 
 header nav {
   display: flex;
@@ -123,6 +107,7 @@ h3 {
   font-size: 0.8em;
   box-shadow: 0 10px 15px var(--cta-shadow);
 }
+
 .browsestyle {
   flex-grow: 1;
   display: flex;
@@ -175,10 +160,6 @@ footer p {
   background-color: var(--cta-img-col);
 }
 
-.cta-best-seller {
-  padding: 30px 50px;
-}
-
 .cta-xs {
   font-size: 0.8em;
   padding: 10px 20px;
@@ -226,11 +207,9 @@ footer p {
 }
 
 /* Homepage */
-
+/* Existing CSS */
 .best-seller-cover {
-  /* height: 50vh;
-  width: 100%;
-  overflow: hidden; */
+  margin: 30px;
   height: 50vh;
   display: flex;
   flex-direction: column;
@@ -240,12 +219,62 @@ footer p {
 
 .best-seller img {
   width: 100%;
+  height: auto; /* Use auto to maintain image aspect ratio */
+  object-fit: cover;
+  position: relative; /* Adjust image positioning */
+  z-index: 1; /* Ensure the image stays at a higher level */
+}
+
+.best-seller a {
+  position: relative; /* Position the anchor */
+  display: inline-block; /* Use inline-block for the anchor */
+}
+
+.best-seller-button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 10px 20px; /* Adjust button padding as needed */
+  background-color: #ffffff; /* Example button background color */
+  color: #333333; /* Example button text color */
+  border: 1px solid #333333; /* Example button border */
+  cursor: pointer;
+  z-index: 2; /* Ensure the button appears above the image */
+}
+
+/* Javascript Styling BestSellerCover  */
+
+.best-seller img {
+  width: 100%;
   object-fit: cover;
 }
+
 .best-seller h4 {
   display: none;
 }
 
+.best-seller {
+  position: relative;
+  width: 100%; /* Ensure the image takes full width */
+  height: 100%; /* Ensure the image takes full height */
+  display: block;
+}
+
+.best-seller-button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 10px 20px; /* Adjust button padding as needed */
+  background-color: #ffffff; /* Example button background color */
+  color: #333333; /* Example button text color */
+  border: 1px solid #333333; /* Example button border */
+  cursor: pointer;
+}
+*/
+
+/*dfsksdjlkfjdslkfjdlsdkfjlkdsjflkdsjlfkjsdlkfjldjflsdkjfldskjf*/
 .discover {
   display: grid;
   grid-template-columns: repeat(4, minmax(20px, 1fr));
@@ -335,17 +364,6 @@ footer p {
   box-shadow: 0 10px 15px var(--cta-header-col);
 }
 
-/* .price {
-  float: right;
-  display: inline-block;
-  font-size: 1.5em;
-  margin-left: 50px;
-}
-.info-xs {
-  float: left;
-  display: inline-block;
-} */
-
 /*CONTACT*/
 .form {
   background-color: var(--cta-col);
@@ -416,6 +434,25 @@ h3 {
   font-weight: bold;
   box-shadow: 0 10px 15px var(--cta-shadow);
 }
+
+/* xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx */
+/* SHOPPING CART JAVASCRIPT  */
+.cart {
+  border: 1px solid #fff;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.cart-items {
+  border: 1px solid #fff;
+  margin: 5px;
+  width: 90%;
+}
+/* xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx */
 @media (min-width: 1024px) {
   .button-mobile {
     display: none;
@@ -454,12 +491,7 @@ h3 {
   .discover {
     grid-template-columns: repeat(2, minmax(20px, 1fr));
   }
-  /* .best-seller-cover {
-    width: 100%;
-  }
-  .best-seller {
-    height: 30vh;
-  } */
+
   .film-details {
     display: flex;
     align-items: center;
@@ -534,19 +566,6 @@ h3 {
       1fr
     ); /* Adjust column count for smaller screens */
   }
-
-  /* .genrebar {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  } */
-
-  /* .best-seller-cover {
-    height: 30vh;
-  } */
-  /* .best-seller {
-    height: 30vh;
-  } */
 
   .film-list {
     grid-template-columns: repeat(2, minmax(20px, 1fr));
