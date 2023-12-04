@@ -1,4 +1,4 @@
-import { addToCart } from "../pages/store";
+import { addToCart } from "../pages/store.js";
 
 export async function displayFilm(film, displaySectionName) {
   const displayContainer = document.querySelector(displaySectionName);
