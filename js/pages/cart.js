@@ -1,19 +1,29 @@
 let cart = [];
 
-export function addToCart(film) {
+export async function addToCart(film) {
   const existingFilm = cart.find((filmInCart) => filmInCart.id === film.id);
 
   if (existingFilm) {
     alert("You have already addded this film to cart.");
   } else {
     cart.push({ film });
+    console.log("CART:", cart);
   }
-  displayCart();
 }
+
+document.addEventListener("DOMContentLoaded", function () {
+  const cartButton = document.querySelector(".cart-btn");
+  cartButton.addEventListener("click", function () {
+    alert("CHUJ KURWA");
+    window.location.href = "cart.html";
+
+    displayCart();
+  });
+});
 
 function displayCart() {
   const cartFilmsContainer = document.querySelector(`.cart-items`);
-  const cartTotalElement = document.querySelector(`cart-total`);
+  // const cartTotalElement = document.querySelector(`.cart-total`);
   let total = 0;
 
   cartFilmsContainer.innerHTML = ``;
@@ -30,5 +40,5 @@ function displayCart() {
     total += film.price;
   });
 
-  cartTotalElement = `${total.toFixed(2)}`;
+  // cartTotalElement = `${total.toFixed(2)}`;
 }

@@ -1,4 +1,4 @@
-import { addToCart } from "../pages/store.js";
+import { addToCart } from "../pages/cart.js";
 
 export async function displayFilm(film, displaySectionName) {
   const displayContainer = document.querySelector(displaySectionName);
@@ -20,10 +20,9 @@ export async function displayFilm(film, displaySectionName) {
   addToCartBtn.textContent = "Add to cart";
   addToCartBtn.classList.add("button-style1");
   addToCartBtn.addEventListener(`click`, () => {
-    console.log(film.title);
-    alert("button clicked", film.title);
-
     addToCart(film);
+    console.log(film.title);
+    alert("button clicked ", film.title);
   });
 
   filmElement.append(img);
