@@ -9,36 +9,42 @@ export async function addToCart(film) {
     cart.push({ film });
     console.log("CART:", cart);
   }
+  localStorage.setItem("cart", JSON.stringify(cart));
 }
-
-document.addEventListener("DOMContentLoaded", function () {
-  const cartButton = document.querySelector(".cart-btn");
-  cartButton.addEventListener("click", function () {
-    alert("CHUJ KURWA");
-    window.location.href = "cart.html";
-
-    displayCart();
-  });
-});
 
 function displayCart() {
   const cartFilmsContainer = document.querySelector(`.cart-items`);
-  // const cartTotalElement = document.querySelector(`.cart-total`);
+  const cartTotalElement = document.querySelector(`.cart-total`);
   let total = 0;
-
+  const storedCart = JSON.parse(localStorage.getItem("cart")) || [];
   cartFilmsContainer.innerHTML = ``;
 
-  cart.forEach((film) => {
+  storedCart.forEach((cartItem) => {
+    const cartFilm = cartItem.film;
     const cartFilmElement = document.createElement(`li`);
-    cartFilmElement.textContent = `${film.title} - Price: ${film.price}`;
+    cartFilmElement.textContent = `${cartFilm.title} - Price: ${cartFilm.price}`;
+
     const filmImg = document.createElement("img");
-    filmImg.src = film.image;
-    filmImg.alt = film.title;
+    filmImg.src = cartFilm.image;
+    filmImg.alt = cartFilm.title;
 
-    cartFilmsContainer.appendChild(cartFilmElement, filmImg);
+    cartFilmElement.appendChild(filmImg);
+    cartFilmsContainer.appendChild(cartFilmElement);
 
-    total += film.price;
+    total += cartFilm.price;
   });
 
-  // cartTotalElement = `${total.toFixed(2)}`;
+  cartTotalElement.textContent = `${total.toFixed(2)}`;
 }
+
+document.addEventListener("DOMContentLoaded", function () {
+  // Check if current page is cart.html and invoke displayCart
+  if (window.location.pathname === "/cart.html") {
+    displayCart();
+  }
+
+  const cartButton = document.querySelector(".cart-btn");
+  cartButton.addEventListener("click", function () {
+    window.location.href = "../cart.html";
+  });
+});

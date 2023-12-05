@@ -54,7 +54,17 @@ header nav {
   width: 100%;
   align-items: center;
 }
+.visually-hidden {
+  position: absolute;
 
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
 .browse {
   flex-grow: 1;
   text-align: center;

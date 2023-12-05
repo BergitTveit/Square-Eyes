@@ -1,4 +1,4 @@
-import { fetchAllFilms } from "../api/api.js";
+import { fetchAllFilms, fetchFilmsByGenre } from "../api/api.js";
 import { displayFilms } from "../render/list.js";
 import { showLoader, hideLoader } from "../loader.js";
 import { fetchFilmsAccordingToSearch } from "../api/search.js";
@@ -23,6 +23,29 @@ export async function filmsPage() {
     hideLoader();
 
     displayFilms(films, ".film-list");
+
+    const genreSelect = document.getElementById("genreSelect");
+    genreSelect.addEventListener("change", async function () {
+      const selectedGenre = genreSelect.value;
+
+      try {
+        showLoader();
+        let filteredFilms;
+
+        if (selectedGenre === "All") {
+          filteredFilms = await fetchAllFilms();
+        } else {
+          filteredFilms = await fetchFilmsByGenre(selectedGenre);
+        }
+
+        hideLoader();
+        filmListContainer.innerHTML = "";
+        displayFilms(filteredFilms, ".film-list");
+      } catch (error) {
+        hideLoader();
+        filmListContainer.innerHTML = handleError("Unable to load films");
+      }
+    });
   } catch (error) {
     hideLoader();
     filmListContainer.innerHTML = handleError(" Unable to load film page");

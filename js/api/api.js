@@ -7,7 +7,7 @@ export async function fetchAllFilms() {
     throw new Error("Failed to fetch films. Status:", response.status);
   }
   const films = await response.json();
-
+  console.log(films);
   return films;
 }
 
@@ -34,4 +34,10 @@ export async function fetchFilmsSortedByReleased(amount) {
   films.sort((film1, film2) => film2.released - film1.released);
 
   return films.slice(0, amount);
+}
+export async function fetchFilmsByGenre(genre) {
+  const films = await fetchAllFilms();
+  const filteredFilms = films.filter((film) => film.genres.includes(genre));
+  console.log(filteredFilms);
+  return filteredFilms;
 }

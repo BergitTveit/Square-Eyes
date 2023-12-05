@@ -39,7 +39,7 @@
           <label for="searchInput" class="visually-hidden">Search:</label>
           <input type="text" id="searchInput" placeholder="Search" />
         </div>
-        <button class="margin-s cart-btn">Cart</button>
+        <button class="cart-btn">Cart</button>
         <div class="login">
           <a href="#" class="cta cta-s color">Log in</a>
         </div>
@@ -54,15 +54,14 @@
         <!-- needs styling : padding left : 10px.. Center word in mobile-->
       </div>
       <div class="banners">
-        <ul class="genrebar">
-          <li><a href="#">horror</a></li>
-          <li><a href="#">action</a></li>
-          <li><a href="#">comedy</a></li>
-          <li><a href="#">drama</a></li>
-          <li><a href="#">sci-fi</a></li>
-          <li><a href="#">family</a></li>
-          <li><a href="#">family</a></li>
-        </ul>
+        <label for="genreSelect">Select Genre:</label>
+        <select id="genreSelect">
+          <option value="All">All Genres</option>
+          <option value="Action">Action</option>
+          <option value="Comedy">Comedy</option>
+          <option value="Drama">Drama</option>
+          <!-- Add more options for different genres as needed -->
+        </select>
       </div>
 
       <div class="film-list"></div>
@@ -78,7 +77,6 @@
     <footer>
       <nav aria-label="Footer Navigation">
         <ul>
-          <li><a href="../index.html">Home</a></li>
           <li><a href="../contact.html">Contact</a></li>
           <li><a href="../about.html">About</a></li>
           <li><a href="#">FAQ</a></li>
