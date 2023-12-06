@@ -44,13 +44,18 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   const cartButton = document.querySelector(".cart-btn");
-  cartButton.classList.add("button-style1");
-  cartButton.addEventListener("click", function () {
-    window.location.href = "../cart.html";
-  });
+  if (cartButton) {
+    cartButton.classList.add("button-style1");
+    cartButton.addEventListener("click", function () {
+      window.location.href = "../cart.html";
+    });
+  }
+
   const checkoutButton = document.querySelector(".checkout");
-  checkoutButton.classList.add("button-style1");
-  checkoutButton.addEventListener("click", function () {
-    window.location.href = "payment.html";
-  });
+  if (checkoutButton) {
+    checkoutButton.classList.add("button-style1");
+    checkoutButton.addEventListener("click", function () {
+      window.location.href = "payment.html";
+    });
+  }
 });
