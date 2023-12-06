@@ -35,9 +35,10 @@ export async function fetchFilmsSortedByReleased(amount) {
 
   return films.slice(0, amount);
 }
+
 export async function fetchFilmsByGenre(genre) {
   const films = await fetchAllFilms();
-  const filteredFilms = films.filter((film) => film.genres.includes(genre));
+  const filteredFilms = films.filter((film) => film.genre === genre);
   console.log(filteredFilms);
   return filteredFilms;
 }
