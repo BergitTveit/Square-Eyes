@@ -12,10 +12,16 @@ export async function fetchFilmsAccordingToSearch(searchText) {
   return filteredFilms;
 }
 
-search.addEventListener("keyup", async () => {
-  if (event.key === "Enter") {
-    const searchValue = event.target.value.trim().toLowerCase();
-    window.location.href =
-      "../films/index.html?search=" + encodeURIComponent(searchValue);
-  }
+// search.addEventListener("keyup", async () => {
+//   if (event.key === "Enter") {
+//     const searchValue = event.target.value.trim().toLowerCase();
+//     window.location.href =
+//       "../films/index.html?search=" + encodeURIComponent(searchValue);
+//   }
+// });
+
+search.addEventListener("input", async (event) => {
+  const searchValue = event.target.value.trim().toLowerCase();
+  window.location.href =
+    "../films/index.html?search=" + encodeURIComponent(searchValue);
 });
