@@ -1,3 +1,5 @@
+import { addToCart } from "../pages/cart.js";
+
 export async function displayFilmDetails(film) {
   const filmDetailsContainer = document.querySelector(".film-details");
   const filmTitle = document.querySelector(".film-title");
@@ -31,12 +33,12 @@ export async function displayFilmDetails(film) {
   });
   filmDetailsContainer.prepend(favorite);
 
-  const button = document.createElement("button");
-  button.textContent = "BUY";
-  button.className = "button-style1";
-  button.addEventListener("click", () => {
-    // add event here)
-    alert("button clicked!");
+  const addToCartBtn = document.createElement("button");
+  addToCartBtn.textContent = "Add to cart";
+  addToCartBtn.className = "button-style1";
+  addToCartBtn.addEventListener("click", () => {
+    addToCart(film);
+    alert("Added to cart: " + film.title);
   });
-  filmDetailsContainer.appendChild(button);
+  filmDetailsContainer.appendChild(addToCartBtn);
 }

@@ -47,4 +47,8 @@ document.addEventListener("DOMContentLoaded", function () {
   cartButton.addEventListener("click", function () {
     window.location.href = "../cart.html";
   });
+  const checkoutButton = document.querySelector(".checkout");
+  checkoutButton.addEventListener("click", function () {
+    window.location.href = "payment.html";
+  });
 });
