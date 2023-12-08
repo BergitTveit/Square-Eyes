@@ -27,10 +27,24 @@ export async function displayFilm(film, displaySectionName) {
 
   filmElement.append(img);
   filmElements.append(filmElement, title, addToCartBtn);
-  displayContainer.append(filmElements);
+
+  if (displayContainer) {
+    displayContainer.appendChild(filmElements);
+  } else {
+    console.error("Display container not found");
+  }
 }
 
 export function displayFilms(filmList, displaySectionName) {
+  const displayContainer = document.querySelector(displaySectionName);
+
+  if (!displayContainer) {
+    console.error("Display container not found");
+    return;
+  }
+
+  displayContainer.innerHTML = "";
+
   filmList.forEach((film) => {
     displayFilm(film, displaySectionName);
   });
