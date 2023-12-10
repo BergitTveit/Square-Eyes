@@ -360,6 +360,21 @@ footer p {
   margin-top: auto;
   align-self: end;
   margin-bottom: 30%;
+  padding: 20px 30px;
+  border-radius: 50px;
+  max-width: 20%;
+  max-height: 20%;
+  text-align: center;
+  text-decoration: none;
+  font-size: 70%;
+  box-shadow: 0 10px 15px var(--cta-header-col);
+}
+.button-style2 {
+  background-color: var(--accent-col);
+  color: var(--text-col);
+  margin-top: auto;
+  align-self: end;
+  margin-bottom: auto;
   padding: 20px 50px;
   border-radius: 50px;
   text-align: center;
@@ -367,7 +382,6 @@ footer p {
   font-size: 1.5em;
   box-shadow: 0 10px 15px var(--cta-header-col);
 }
-
 /*CONTACT*/
 .form {
   background-color: var(--cta-col);

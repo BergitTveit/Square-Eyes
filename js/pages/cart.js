@@ -45,7 +45,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   const cartButton = document.querySelector(".cart-btn");
   if (cartButton) {
-    cartButton.classList.add("button-style1");
+    cartButton.classList.add("button-style2");
     cartButton.addEventListener("click", function () {
       window.location.href = "../cart.html";
     });
