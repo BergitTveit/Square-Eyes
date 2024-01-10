@@ -1,51 +1,51 @@
-import { addToCart } from "../pages/cart.js";
+// import { addToCart } from "../pages/cart.js";
 
-export async function displayFilm(film, displaySectionName) {
-  const displayContainer = document.querySelector(displaySectionName);
+// export async function displayFilm(film, displaySectionName) {
+//   const displayContainer = document.querySelector(displaySectionName);
 
-  const filmElements = document.createElement("div");
-  filmElements.classList.add("film-item");
+//   const filmElements = document.createElement("div");
+//   filmElements.classList.add("film-item");
 
-  const filmElement = document.createElement("a");
-  filmElement.href = "/film/?id=" + film.id;
+//   const filmElement = document.createElement("a");
+//   filmElement.href = "/film/?id=" + film.id;
 
-  const img = document.createElement("img");
-  img.src = film.image;
-  img.alt = film.title;
+//   const img = document.createElement("img");
+//   img.src = film.images[0].src;
+//   img.alt = film.name;
 
-  const title = document.createElement("h4");
-  title.textContent = film.title;
+//   const title = document.createElement("h4");
+//   title.textContent = film.name;
 
-  const addToCartBtn = document.createElement("button");
-  addToCartBtn.textContent = "Add to cart";
-  addToCartBtn.classList.add("button-style1");
-  addToCartBtn.addEventListener(`click`, () => {
-    addToCart(film);
-    console.log(film.title);
-    alert("button clicked ", film.title);
-  });
+//   const addToCartBtn = document.createElement("button");
+//   addToCartBtn.textContent = "Add to cart";
+//   addToCartBtn.classList.add("button-style1");
+//   addToCartBtn.addEventListener(`click`, () => {
+//     addToCart(film);
+//     console.log(film.title);
+//     alert("button clicked ", film.title);
+//   });
 
-  filmElement.append(img);
-  filmElements.append(filmElement, title, addToCartBtn);
+//   filmElement.append(img);
+//   filmElements.append(filmElement, title, addToCartBtn);
 
-  if (displayContainer) {
-    displayContainer.appendChild(filmElements);
-  } else {
-    console.error("Display container not found");
-  }
-}
+//   if (displayContainer) {
+//     displayContainer.appendChild(filmElements);
+//   } else {
+//     console.error("Display container not found");
+//   }
+// }
 
-export function displayFilms(filmList, displaySectionName) {
-  const displayContainer = document.querySelector(displaySectionName);
+// export function displayFilms(filmList, displaySectionName) {
+//   const displayContainer = document.querySelector(displaySectionName);
 
-  if (!displayContainer) {
-    console.error("Display container not found");
-    return;
-  }
+//   if (!displayContainer) {
+//     console.error("Display container not found");
+//     return;
+//   }
 
-  displayContainer.innerHTML = "";
+//   displayContainer.innerHTML = "";
 
-  filmList.forEach((film) => {
-    displayFilm(film, displaySectionName);
-  });
-}
+//   filmList.forEach((film) => {
+//     displayFilm(film, displaySectionName);
+//   });
+// }
