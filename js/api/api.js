@@ -1,22 +1,22 @@
 import { url } from "../constants.js";
-const productContainer = document.querySelector(".film-list");
+// const productContainer = document.querySelector(".film-list");
+
 export async function fetchAllFilms() {
-  const response = await fetch(url);
+  try {
+    const response = await fetch(url);
 
-  if (!response.ok) {
-    throw new Error("Failed to fetch films. Status:", response.status);
+    if (!response.ok) {
+      throw new Error(`Failed to fetch films. Status: ${response.status}`);
+    }
+
+    const getResults = await response.json();
+    console.log(getResults);
+    return getResults;
+  } catch (error) {
+    console.error("Error fetching films:", error);
+
+    throw error;
   }
-  const getResults = await response.json();
-  console.log(getResults);
-  createHTML(getResults);
-}
-
-fetchAllFilms();
-
-function createHTML(products) {
-  products.forEach(function (product) {
-    productContainer.innerHTML += product.name;
-  });
 }
 
 export async function fetchFilm(id) {
@@ -52,7 +52,6 @@ export async function fetchFilmsSortedByReleased(amount) {
 export async function fetchFilmsByGenre(genre) {
   const films = await fetchAllFilms();
   const filteredFilms = films.filter((film) => {
-    // Assuming the API response has a 'categories' array
     return film.categories.some(
       (category) => category.name.toLowerCase() === genre.toLowerCase()
     );
