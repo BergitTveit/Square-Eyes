@@ -2,6 +2,8 @@ import { url } from "../constants.js";
 
 export async function fetchAllFilms() {
   const response = await fetch(url);
+  const getResults = await response.json();
+  console.log(getResults);
 
   if (!response.ok) {
     throw new Error("Failed to fetch films. Status:", response.status);

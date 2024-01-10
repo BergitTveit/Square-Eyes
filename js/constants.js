@@ -1,3 +1,3 @@
-export const baseUrl = "https://api.noroff.dev";
-export const endpoint = "/api/v1/square-eyes/";
+export const baseUrl = "https://www.square-eyes.no";
+export const endpoint = "/wp-json/wc/store/products";
 export const url = baseUrl + endpoint;
