@@ -7,10 +7,12 @@ export async function displayFilm(film, displaySectionName) {
   filmElements.classList.add("film-item");
 
   const filmElement = document.createElement("a");
-  filmElement.href = film.permalink;
+  filmElement.href = `/film/?id=${film.id}`;
+  filmElement.classList.add("film-link");
 
   const img = document.createElement("img");
-  img.src = film.images[0]?.src;
+  img.src = film.images[0]?.thumbnail;
+  img.alt = film.name;
 
   const title = document.createElement("h4");
   title.textContent = film.name;

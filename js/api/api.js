@@ -1,5 +1,4 @@
 import { url } from "../constants.js";
-// const productContainer = document.querySelector(".film-list");
 
 export async function fetchAllFilms() {
   try {
@@ -19,15 +18,17 @@ export async function fetchAllFilms() {
   }
 }
 
-export async function fetchFilm(id) {
-  const response = await fetch(url + id);
-  console.log(response);
-  if (!response.ok) {
-    throw new Error("Failed to fetch film Status:", response.status);
-  }
-  const film = await response.json();
+export async function fetchFilmById(filmId) {
+  try {
+    url.searchParams.set("id", filmId);
 
-  return film;
+    const response = await fetch(url.toString());
+    const film = await response.json();
+    return film;
+  } catch (error) {
+    console.error("Error fetching film by ID:", error);
+    throw error;
+  }
 }
 
 export async function fetchFilmsSortedByRaiting(amount) {
