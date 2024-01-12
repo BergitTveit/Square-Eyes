@@ -1,3 +1,4 @@
+// js/pages/cart.js
 let cart = [];
 
 export async function addToCart(film) {

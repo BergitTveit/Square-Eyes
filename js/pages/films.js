@@ -1,3 +1,4 @@
+// js/api/films.js
 import { fetchAllFilms } from "../api/api.js";
 import { displayFilms } from "../render/list.js";
 

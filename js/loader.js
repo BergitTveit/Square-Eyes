@@ -1,3 +1,5 @@
+// js/loader.js
+
 export function showLoader() {
   document.innerHtml = "";
   const loader = document.getElementById("loader");

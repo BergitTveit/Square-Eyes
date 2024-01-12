@@ -1,3 +1,4 @@
+// js/api/search.js
 import { fetchAllFilms } from "./api.js";
 import { displayFilms } from "../render/list.js";
 

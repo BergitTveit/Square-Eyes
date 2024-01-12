@@ -1,3 +1,4 @@
+// js/recomendations.js
 import { fetchFilmsSortedByRaiting } from "./api/api.js";
 import { displayFilms } from "./render/list.js";
 

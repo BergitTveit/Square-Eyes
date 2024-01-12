@@ -1,3 +1,5 @@
+// js/api/api.js
+
 import { url } from "../constants.js";
 
 export async function fetchAllFilms() {
@@ -20,10 +22,20 @@ export async function fetchAllFilms() {
 
 export async function fetchFilmById(filmId) {
   try {
-    url.searchParams.set("id", filmId);
+    const filmUrl = new URL(`${url}/${filmId}`);
+    console.log("Fetching film details. URL:", filmUrl.toString());
 
-    const response = await fetch(url.toString());
+    const response = await fetch(filmUrl.toString());
+
+    if (!response.ok) {
+      throw new Error(
+        `Failed to fetch film details. Status: ${response.status}`
+      );
+    }
+
     const film = await response.json();
+
+    console.log("Fetched film details:", film);
     return film;
   } catch (error) {
     console.error("Error fetching film by ID:", error);

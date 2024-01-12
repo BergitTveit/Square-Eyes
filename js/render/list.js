@@ -1,3 +1,5 @@
+// js/render/list.js
+
 import { addToCart } from "../pages/cart.js";
 
 export async function displayFilm(film, displaySectionName) {

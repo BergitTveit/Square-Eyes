@@ -1,3 +1,4 @@
+// js/billingform.js
 function createElement(tag, attributes = {}, text = "") {
   const element = document.createElement(tag);
   Object.assign(element, attributes);

@@ -1,3 +1,5 @@
+// js/bestseller.js
+
 import { fetchFilmsSortedByReleased } from "./api/api.js";
 
 export async function fetchAndDisplayBestSeller() {
@@ -7,12 +9,11 @@ export async function fetchAndDisplayBestSeller() {
     let sortedFilms = await fetchFilmsSortedByReleased(1);
     console.log("Fetched films:", sortedFilms);
 
-    const bestSellerFilm = sortedFilms[0]; // Assuming the bestseller is the first film in the sorted list
-
+    const bestSellerFilm = sortedFilms[0];
     const bestSellerContainer = document.querySelector(".best-seller-cover");
     if (!bestSellerContainer) {
       console.error("Best seller container not found!");
-      return; // Exit the function if the container is not found
+      return;
     }
 
     const filmElement = document.createElement("a");
