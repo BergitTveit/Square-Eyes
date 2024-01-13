@@ -24,7 +24,7 @@ export async function displayFilm(film, displaySectionName) {
   addToCartBtn.classList.add("button-style1");
   addToCartBtn.addEventListener(`click`, () => {
     addToCart(film);
-    console.log(film.name);
+    // console.log(film.name);
     alert("button clicked ", film.name);
   });
 

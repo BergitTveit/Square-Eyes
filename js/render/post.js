@@ -1,8 +1,8 @@
 // js/render/post.js
 
 export function displayFilmDetails(film) {
-  console.log("Displaying film details:", film);
-  console.log("Film object keys:", Object.keys(film));
+  // console.log("Displaying film details:", film);
+  // console.log("Film object keys:", Object.keys(film));
   const filmDetailsContainer = document.querySelector(".film-details");
   const filmTitle = document.createElement("h2");
   const filmImage = document.createElement("img");

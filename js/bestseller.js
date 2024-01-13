@@ -3,11 +3,11 @@
 import { fetchFilmsSortedByReleased } from "./api/api.js";
 
 export async function fetchAndDisplayBestSeller() {
-  console.log("Fetching films and displaying bestseller film");
+  // console.log("Fetching films and displaying bestseller film");
 
   try {
     let sortedFilms = await fetchFilmsSortedByReleased(1);
-    console.log("Fetched films:", sortedFilms);
+    // console.log("Fetched films:", sortedFilms);
 
     const bestSellerFilm = sortedFilms[0];
     const bestSellerContainer = document.querySelector(".best-seller-cover");
@@ -36,7 +36,7 @@ export async function fetchAndDisplayBestSeller() {
     filmElement.appendChild(img);
     filmElement.appendChild(button);
     bestSellerContainer.append(filmElement);
-    console.log("Bestseller film displayed");
+    // console.log("Bestseller film displayed");
   } catch (error) {
     console.error("An error occurred", error);
   }
