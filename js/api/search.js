@@ -9,7 +9,7 @@ const doneTypingInterval = 50;
 export async function fetchFilmsAccordingToSearch(searchText) {
   const allFilms = await fetchAllFilms();
   const filteredFilms = allFilms.filter((film) =>
-    film.title.toLowerCase().includes(searchText.toLowerCase())
+    film.name.toLowerCase().includes(searchText.toLowerCase())
   );
   console.log("Filtered Films:", filteredFilms);
   return filteredFilms;

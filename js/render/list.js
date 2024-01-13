@@ -13,7 +13,7 @@ export async function displayFilm(film, displaySectionName) {
   filmElement.classList.add("film-link");
 
   const img = document.createElement("img");
-  img.src = film.images[0]?.thumbnail;
+  img.src = film.images[0]?.src;
   img.alt = film.name;
 
   const title = document.createElement("h4");
