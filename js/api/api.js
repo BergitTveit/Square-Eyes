@@ -53,13 +53,31 @@ export async function fetchFilmsSortedByRaiting(amount) {
   return films.slice(0, amount);
 }
 
-export async function fetchFilmsSortedByReleased(amount) {
-  let films = await fetchAllFilms();
-  films.sort(
-    (film1, film2) => new Date(film2.released) - new Date(film1.released)
+function getReleasedYear(film) {
+  const releasedAttribute = film.attributes.find(
+    (attribute) => attribute.name === "released"
   );
 
-  return films.slice(0, amount);
+  const releasedTerm = releasedAttribute?.terms?.[0];
+
+  return releasedTerm ? parseInt(releasedTerm.name, 10) : 0;
+}
+
+export async function fetchFilmsSortedByReleased(amount) {
+  try {
+    let films = await fetchAllFilms();
+
+    films.sort((film1, film2) => {
+      const released1 = getReleasedYear(film1);
+      const released2 = getReleasedYear(film2);
+      return released2 - released1;
+    });
+
+    return films.slice(0, amount);
+  } catch (error) {
+    console.error("Error fetching and sorting films:", error);
+    throw error;
+  }
 }
 
 export async function fetchFilmsByGenre(genre) {

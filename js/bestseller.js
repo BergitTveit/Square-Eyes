@@ -21,7 +21,7 @@ export async function fetchAndDisplayBestSeller() {
     filmElement.className = "best-seller";
 
     const img = document.createElement("img");
-    img.src = bestSellerFilm.image;
+    img.src = bestSellerFilm.images[0]?.src;
     img.alt = bestSellerFilm.title;
     img.className = "best-seller";
 
