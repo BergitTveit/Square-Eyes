@@ -13,12 +13,16 @@
     <!-- <link rel="preload" href="assets/css/styles.css" as="style" onload="this.onload=null;this.rel='stylesheet'" />
 <link href="assets/css/styles.css" rel="stylesheet" /> -->
 
-<link rel="preload" href="assets/css/styles.css" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+    <link
+      rel="preload"
+      href="assets/css/styles.css"
+      as="style"
+      onload="this.onload=null;this.rel='stylesheet'"
+    />
 
-
-<noscript>
-  <link href="assets/css/styles.css" rel="stylesheet" />
-</noscript>
+    <noscript>
+      <link href="assets/css/styles.css" rel="stylesheet" />
+    </noscript>
 
     <link rel="shortcut icon" href="assets/png/favicon.png" type="image/png" />
     <script type="module" src="./js/api/api.js" defer></script>
@@ -26,38 +30,38 @@
     <script type="module" src="./js/bestseller.js" defer></script>
     <script type="module" src="./js/recomendations.js" defer></script>
     <script type="module" src="./js/pages/films.js" defer></script>
- 
   </head>
   <body>
     <header>
       <div>
-      <nav aria-label="Main Navigation">
-        <div>
-          <a href="index.html">
-            <img
-              src="assets/png/SquareEyes_Logo.png"
-              alt="SquareEyes Logo"
-              class="logo"
-            />
-          </a>
-        </div>
-        <div class="browse">
-          <a href="films/index.html" class="cta cta-s">Films</a>
-        </div>
-        <div class="margin-s">
-          <label for="searchInput" class="visually-hidden">Search:</label>
-          <input type="text" id="searchInput" placeholder="Search" />
-        </div>
-        <button class="cart-btn">Cart</button>
-        <div class="login">
-          <a href="#" class="cta cta-s color">Log in</a>
-        </div></div>
-      </nav>
+        <nav aria-label="Main Navigation">
+          <div>
+            <a href="index.html">
+              <img
+                src="assets/png/SquareEyes_Logo.png"
+                alt="SquareEyes Logo"
+                class="logo"
+              />
+            </a>
+          </div>
+          <div class="browse">
+            <a href="films/index.html" class="cta cta-s">Films</a>
+          </div>
+          <div class="margin-s">
+            <label for="searchInput" class="visually-hidden">Search:</label>
+            <input type="text" id="searchInput" placeholder="Search" />
+          </div>
+          <button class="cart-btn">Cart</button>
+          <div class="login">
+            <a href="#" class="cta cta-s color">Log in</a>
+          </div>
+        </nav>
+      </div>
     </header>
 
     <main>
       <div id="loader" class="loader"></div>
- 
+
       <div class="best-seller-cover"></div>
 
       <section>
@@ -74,7 +78,6 @@
             <option value="Drama">Drama</option>
             <option value="Horror">Horror</option>
             <option value="Kids">Kids</option>
-            
           </select>
         </div>
         <div class="film-list"></div>
