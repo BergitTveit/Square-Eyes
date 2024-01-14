@@ -11,7 +11,7 @@ export async function fetchAllFilms() {
     }
 
     const getResults = await response.json();
-    console.log(getResults);
+
     return getResults;
   } catch (error) {
     console.error("Error fetching films:", error);
@@ -23,7 +23,6 @@ export async function fetchAllFilms() {
 export async function fetchFilmById(filmId) {
   try {
     const filmUrl = new URL(`${url}/${filmId}`);
-    // console.log("Fetching film details. URL:", filmUrl.toString());
 
     const response = await fetch(filmUrl.toString());
 
@@ -35,7 +34,6 @@ export async function fetchFilmById(filmId) {
 
     const film = await response.json();
 
-    // console.log("Fetched film details:", film);
     return film;
   } catch (error) {
     console.error("Error fetching film by ID:", error);
@@ -87,6 +85,6 @@ export async function fetchFilmsByGenre(genre) {
       (category) => category.name.toLowerCase() === genre.toLowerCase()
     );
   });
-  // console.log(filteredFilms);
+
   return filteredFilms;
 }

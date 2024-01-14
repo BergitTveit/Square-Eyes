@@ -8,7 +8,6 @@ export async function filmDetailPage() {
   try {
     const url = new URL(location.href);
     const filmId = url.searchParams.get("id");
-    // console.log("Film ID:", filmId);
 
     if (filmId) {
       const film = await fetchFilmById(filmId);

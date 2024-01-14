@@ -14,7 +14,7 @@ function createInput(id, name, placeholder, type) {
 
 function createLabel(text, htmlFor) {
   const label = createElement("label", { textContent: text, htmlFor });
-  label.classList.add("visually-hidden"); // Add the visually-hidden class
+  label.classList.add("visually-hidden");
   return label;
 }
 
