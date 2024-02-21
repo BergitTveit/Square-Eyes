@@ -23,7 +23,7 @@ Note: The functions.php is changed to accept api requests from any source. Secur
 To get started, clone the repo:
 
 ```bash
-git clone https://github.com/BergitTveit/Square-Eyes/tree/CMS
+git clone https://github.com/BergitTveit/Square-Eyes
 ```
 
 #### Running
