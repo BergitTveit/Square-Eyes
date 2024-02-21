@@ -8,7 +8,7 @@ Square Eyes is a destination for instant access to high-quality videos directly 
 
 ## Built With
 
-Pictures are fetched by an API using WordPress. The website is developed using VS Code. The repository is hosted on my GitHub profile, and the live version is deployed on [Netlify](https://eclectic-caramel-331e46.netlify.app/).
+Pictures are fetched by an API using WordPress. The website is developed using VS Code. The repository is hosted on my GitHub profile, and the live version is deployed on [Netlify](https://square-eyes-blt.netlify.app/).
 Note: The functions.php is changed to accept api requests from any source. Security is yet to be improved.
 
 ### Tech Stack
@@ -22,8 +22,9 @@ Note: The functions.php is changed to accept api requests from any source. Secur
 
 To get started, clone the repo:
 
-<!-- ```bash
-git clone https://github.com/BergitTveit/Square-Eyes/tree/master -->
+```bash
+git clone https://github.com/BergitTveit/Square-Eyes/tree/master
+```
 
 #### Running
 
