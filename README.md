@@ -1,4 +1,4 @@
-# Crossrok Project - Square Eyes
+# Crosswork Project - Square Eyes
 
 ![Project Image](assets/png/Square_Eyes_SS.png)
 
@@ -8,7 +8,7 @@ Square Eyes is a destination for instant access to high-quality videos directly 
 
 ## Built With
 
-Pictures are fetched by an API using WordPress. The website is developed using VS Code, with no additional plugins used other than Prettier and GitHub Classroom. The repository is hosted on my GitHub profile, and the live version is deployed on [Netlify](https://eclectic-caramel-331e46.netlify.app/).
+Pictures are fetched by an API using WordPress. The website is developed using VS Code. The repository is hosted on my GitHub profile, and the live version is deployed on [Netlify](https://eclectic-caramel-331e46.netlify.app/).
 Note: The functions.php is changed to accept api requests from any source. Security is yet to be improved.
 
 ### Tech Stack
@@ -27,7 +27,8 @@ git clone https://github.com/BergitTveit/Square-Eyes/tree/master -->
 
 #### Running
 
-?
+The recommended way of running is to install [Visual Studio Code](https://code.visualstudio.com/)
+For visual aid it is also recommened to install the following plugin [Live Server](https://github.com/ritwickdey/vscode-live-server-plus-plus)
 
 ### Contributing
 
