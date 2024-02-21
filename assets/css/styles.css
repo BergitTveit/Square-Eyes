@@ -1,9 +1,40 @@
+/*Styles added for JS project */
+.loader {
+  display: none;
+  border: 16px solid #f3f3f3; /* Light grey */
+  border-top: 16px solid #3498db; /* Blue */
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  animation: spin 2s linear infinite;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  margin-top: -60px;
+  margin-left: -60px;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.error {
+  border: 1px;
+  color: darkred;
+}
+
+/* Styles from org project */
+
 body {
   font-family: "Roboto Mono", Verdana, Geneva, Tahoma, sans-serif;
   background-color: var(--main-col);
   margin: 0;
-  display: grid;
-  grid-template-rows: auto 1fr auto;
+
   color: var(--text-col);
 }
 :root {
@@ -17,27 +48,23 @@ body {
   --banners-col: rgba(255, 255, 255, 0.05);
   --cta-header-col: rgba(184, 107, 35, 0.35);
 }
-.visually-hidden {
-  position: absolute !important;
-  clip: rect(1px, 1px, 1px, 1px);
-  padding: 0 !important;
-  border: 0 !important;
-  height: 1px !important;
-  width: 1px !important;
-  overflow: hidden;
-  white-space: nowrap;
-}
 
-img {
-  height: 100%;
-  width: auto;
-}
 header nav {
   display: flex;
   width: 100%;
   align-items: center;
 }
+.visually-hidden {
+  position: absolute;
 
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
 .browse {
   flex-grow: 1;
   text-align: center;
@@ -63,13 +90,16 @@ a {
   text-decoration: none;
   letter-spacing: 2px;
 }
+
 img {
   box-shadow: 0 10px 15px var(--img-shadow);
 }
+
 .active {
   font-weight: bold;
   text-transform: uppercase;
 }
+
 h1,
 h2,
 h3 {
@@ -87,22 +117,20 @@ h3 {
   font-size: 0.8em;
   box-shadow: 0 10px 15px var(--cta-shadow);
 }
-header,
-footer {
-  display: flex;
-  align-items: center;
-  padding: 10px;
-}
-
-header {
-  justify-content: space-between;
-}
 
 .browsestyle {
   flex-grow: 1;
   display: flex;
   justify-content: center;
 }
+
+header,
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 footer {
   flex-direction: column;
   text-align: center;
@@ -111,11 +139,21 @@ footer {
 footer nav ul {
   list-style: none;
   margin: 10px;
-  justify-content: center;
+  margin: 0;
+  display: flex;
+  justify-content: space-between;
+  padding: 0;
+  flex-wrap: wrap;
 }
 
 footer nav ul li {
-  margin: 0 70px;
+  padding: 10px 50px;
+}
+
+footer p {
+  margin-bottom: 20px;
+  text-align: center;
+  font-size: x-small;
 }
 
 /*CTA sizes and styling*/
@@ -130,10 +168,6 @@ footer nav ul li {
 
 .cta-img {
   background-color: var(--cta-img-col);
-}
-
-.cta-best-seller {
-  padding: 30px 50px;
 }
 
 .cta-xs {
@@ -158,44 +192,93 @@ footer nav ul li {
   text-align: center;
 }
 /* Banners and bars */
+
 .banners {
+  justify-content: center; /* Center the content horizontally */
+  margin: 0px 0; /* Adjust margins as needed */
   background-color: var(--banners-col);
-  padding: 15px;
   margin-top: 10px;
   text-transform: uppercase;
 }
+
 .genrebar {
-  margin: 0 30px;
-  list-style: none;
-  display: flex;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 10px;
+  padding: 10px;
   letter-spacing: 2px;
-  flex-wrap: wrap;
-  padding-left: 0;
+  list-style: none;
+  margin: 0 20px;
 }
 
-.genrebar li {
-  margin: 0 50px;
+.genrebar a {
+  display: block;
+  text-align: center; /* Make the links block-level for full width */
 }
 
 /* Homepage */
-
+/* Existing CSS */
 .best-seller-cover {
-  background-image: url("../images/sweetheart-cover.jpeg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  width: 100%;
+  margin: 30px;
   height: 50vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+}
+
+.best-seller img {
+  width: 100%;
+  height: auto; /* Use auto to maintain image aspect ratio */
+  object-fit: cover;
+  position: relative; /* Adjust image positioning */
+  z-index: 1; /* Ensure the image stays at a higher level */
+}
+
+.best-seller a {
+  position: relative; /* Position the anchor */
+  display: inline-block; /* Use inline-block for the anchor */
+}
+
+.best-seller-button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 10px 20px;
+  text-transform: uppercase;
+  border-radius: 50px;
+  font-size: 3vh;
+  color: var(--accent-col);
+  background-color: var(--img-shadow);
+  border: 0px solid var(--accent-col);
+  cursor: pointer;
+  z-index: 2;
+  letter-spacing: 5px;
+  box-shadow: 0 7px 7px var(--cta-header-col);
+}
+
+/* Javascript Styling BestSellerCover  */
+
+.best-seller img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.best-seller h4 {
+  display: none;
 }
 
 .best-seller {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 50vh;
+  position: relative;
+  width: 100%; /* Ensure the image takes full width */
+  height: 100%; /* Ensure the image takes full height */
+  display: block;
 }
 
+*/
+
+/*dfsksdjlkfjdslkfjdlsdkfjlkdsjflkdsjlfkjsdlkfjldjflsdkjfldskjf*/
 .discover {
   display: grid;
   grid-template-columns: repeat(4, minmax(20px, 1fr));
@@ -241,7 +324,7 @@ footer nav ul li {
   grid-template-columns: repeat(3, minmax(20px, 1fr));
 }
 .recommendations img {
-  width: 100%;
+  width: 50%;
 }
 
 /* Film Details page*/
@@ -277,6 +360,21 @@ footer nav ul li {
   margin-top: auto;
   align-self: end;
   margin-bottom: 30%;
+  padding: 20px 30px;
+  border-radius: 50px;
+  max-width: 20%;
+  max-height: 20%;
+  text-align: center;
+  text-decoration: none;
+  font-size: 70%;
+  box-shadow: 0 10px 15px var(--cta-header-col);
+}
+.button-style2 {
+  background-color: var(--accent-col);
+  color: var(--text-col);
+  margin-top: auto;
+  align-self: end;
+  margin-bottom: auto;
   padding: 20px 50px;
   border-radius: 50px;
   text-align: center;
@@ -284,18 +382,6 @@ footer nav ul li {
   font-size: 1.5em;
   box-shadow: 0 10px 15px var(--cta-header-col);
 }
-
-.price {
-  float: right;
-  display: inline-block;
-  font-size: 1.5em;
-  margin-left: 50px;
-}
-.info-xs {
-  float: left;
-  display: inline-block;
-}
-
 /*CONTACT*/
 .form {
   background-color: var(--cta-col);
@@ -366,6 +452,25 @@ h3 {
   font-weight: bold;
   box-shadow: 0 10px 15px var(--cta-shadow);
 }
+
+/* xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx */
+/* SHOPPING CART JAVASCRIPT  */
+.cart {
+  border: 1px solid #fff;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.cart-items {
+  border: 1px solid #fff;
+  margin: 5px;
+  width: 90%;
+}
+/* xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx */
 @media (min-width: 1024px) {
   .button-mobile {
     display: none;
@@ -386,12 +491,17 @@ h3 {
   header div {
     font-size: 0.8em;
   }
+  .genrebar {
+    grid-template-columns: repeat(
+      3,
+      1fr
+    ); /* Adjust column count for smaller screens */
+  }
 
   footer {
     display: flex;
   }
   .footer nav {
-    padding-left: 5%;
     box-sizing: border-box;
     width: 100%;
   }
@@ -399,12 +509,7 @@ h3 {
   .discover {
     grid-template-columns: repeat(2, minmax(20px, 1fr));
   }
-  .best-seller-cover {
-    width: 100%;
-  }
-  .best-seller {
-    height: 30vh;
-  }
+
   .film-details {
     display: flex;
     align-items: center;
@@ -443,7 +548,6 @@ h3 {
     width: 100%;
   }
   footer nav {
-    padding-left: 5%;
     box-sizing: border-box;
     width: 100%;
   }
@@ -474,18 +578,11 @@ h3 {
     margin-left: 0;
     margin-bottom: 20px;
   }
-
   .genrebar {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .best-seller-cover {
-    height: 30vh;
-  }
-  .best-seller {
-    height: 30vh;
+    grid-template-columns: repeat(
+      1,
+      1fr
+    ); /* Adjust column count for smaller screens */
   }
 
   .film-list {

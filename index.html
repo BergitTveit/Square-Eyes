@@ -6,131 +6,90 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Welcome to Square Eyes, the best destination for streaming films from independent makers. Discover a wide range of genres, including horror, action, comedy, drama, sci-fi, and family. Explore our best seller and popular movie recommendations. Join us for a movie night and showcase your work. Contact us for more information." />
+      content="Welcome to Square Eyes, the best destination for streaming films from independent makers. Discover a wide range of genres, including horror, action, comedy, drama, sci-fi, and family. Explore our best seller and popular movie recommendations. Join us for a movie night and showcase your work. Contact us for more information."
+    />
 
     <title>Square Eyes | Film streaming from independent makers.</title>
-    <link href="assets/css/styles.css" rel="stylesheet" />
+    <!-- <link rel="preload" href="assets/css/styles.css" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+<link href="assets/css/styles.css" rel="stylesheet" /> -->
+
+    <link
+      rel="preload"
+      href="assets/css/styles.css"
+      as="style"
+      onload="this.onload=null;this.rel='stylesheet'"
+    />
+
+    <noscript>
+      <link href="assets/css/styles.css" rel="stylesheet" />
+    </noscript>
+
+    <link rel="shortcut icon" href="assets/png/favicon.png" type="image/png" />
+    <script type="module" src="./js/api/api.js" defer></script>
+    <script type="module" src="./js/api/search.js" defer></script>
+    <script type="module" src="./js/bestseller.js" defer></script>
+    <script type="module" src="./js/recomendations.js" defer></script>
+    <script type="module" src="./js/pages/films.js" defer></script>
   </head>
   <body>
     <header>
-      <nav aria-label="Main Navigation">
-        <div>
-          <a href="index.html">
-            <img
-              src="assets/png/SquareEyes_Logo.png"
-              alt="SquareEyes Logo"
-              class="logo" />
-          </a>
-        </div>
-        <div class="browse">
-          <a href="genres/1genres.html" class="cta cta-s">Films</a>
-        </div>
-        <div class="margin-s">
-          <label for="searchInput" class="visually-hidden">Search:</label>
-          <input type="text" id="searchInput" placeholder="Search" />
-        </div>
-        <div class="margin-s">
-          <a href="cart.html" class="cta cta-s color">Cart</a>
-        </div>
-        <div class="login">
-          <a href="whoarewe.html" class="cta cta-s color">Log in</a>
-        </div>
-      </nav>
+      <div>
+        <nav aria-label="Main Navigation">
+          <div>
+            <a href="index.html">
+              <img
+                src="assets/png/SquareEyes_Logo.png"
+                alt="SquareEyes Logo"
+                class="logo"
+              />
+            </a>
+          </div>
+          <div class="browse">
+            <a href="films/index.html" class="cta cta-s">Films</a>
+          </div>
+          <div class="margin-s">
+            <label for="searchInput" class="visually-hidden">Search:</label>
+            <input type="text" id="searchInput" placeholder="Search" />
+          </div>
+          <button class="cart-btn">Cart</button>
+          <div class="login">
+            <a href="#" class="cta cta-s color">Log in</a>
+          </div>
+        </nav>
+      </div>
     </header>
 
     <main>
-      <section class="best-seller-cover">
-        <div class="best-seller">
-          <a href="films/sweetheart.html"
-            ><h1 class="cta cta-img cta-best-seller">Best Seller</h1></a
-          >
-        </div>
-      </section>
+      <div id="loader" class="loader"></div>
+
+      <div class="best-seller-cover"></div>
 
       <section>
         <div class="banners">
           <h2>MOST POPULAR</h2>
+          <div class="recommendations"></div>
         </div>
-        <div class="film-list recommendations">
-          <div>
-            <a href="films/sweetheart.html">
-              <img
-                src="../assets/images/batman_unmask-the-truth.jpeg"
-                alt="Batman, unmask the truth."
-            /></a>
-          </div>
-          <div>
-            <a href="films/sweetheart.html">
-              <img src="../assets/images/toy-story_4.jpeg" alt="Toy Story 4."
-            /></a>
-          </div>
-          <div>
-            <a href="films/sweetheart.html">
-              <img
-                src="../assets/images/hobbs-and-shaw.jpeg"
-                alt="Hobbs and shaw."
-            /></a>
-          </div>
+        <div class="banners">
+          <label for="genreSelect">Select Genre:</label>
+          <select id="genreSelect">
+            <option value="All">All Genres</option>
+            <option value="Action">Action</option>
+            <option value="Comedy">Comedy</option>
+            <option value="Drama">Drama</option>
+            <option value="Horror">Horror</option>
+            <option value="Kids">Kids</option>
+          </select>
         </div>
+        <div class="film-list"></div>
       </section>
-
-      <section>
-        <div class="browse">
-          <a href="genres/1genres.html"><h2 class="cta cta-l">discover</h2></a>
-        </div>
-
-        <div class="discover">
-          <div class="film">
-            <img src="assets/images/movienight.jpg" alt="Cinema" />
-            <a href="movienight.html" class="cta cta-s cta-img">Movie night</a>
-          </div>
-          <div class="film">
-            <img
-              src="assets/images/independent-makers.jpg"
-              alt="Independent film maker" />
-
-            <a href="independentmakers.html" class="cta cta-s cta-img"
-              >Independent makers</a
-            >
-          </div>
-          <div class="film">
-            <img
-              src="assets/images/show-your-work.jpg"
-              alt="Editing movie to showcase." />
-            <a href="showyourwork.html" class="cta cta-s cta-img"
-              >Show your work</a
-            >
-          </div>
-          <div class="film">
-            <img
-              src="assets/images/who-are-we.jpg"
-              alt="Group of filmakers editing." />
-            <a href="whoarewe.html" class="cta cta-s cta-img">Who are we</a>
-          </div>
-        </div>
-      </section>
-
-      <div class="banners">
-        <div>
-          <ul class="genrebar">
-            <li><a href="#">horror</a></li>
-            <li><a href="#">action</a></li>
-            <li><a href="#">comedy</a></li>
-            <li><a href="#">drama</a></li>
-            <li><a href="#">sci-fi</a></li>
-            <li><a href="#">family</a></li>
-          </ul>
-        </div>
-      </div>
     </main>
 
     <footer>
       <nav aria-label="Footer Navigation">
         <ul>
-          <li><a href="index.html">Home</a></li>
           <li><a href="contact.html">Contact</a></li>
           <li><a href="about.html">About</a></li>
-          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="#">FAQ</a></li>
         </ul>
       </nav>
       <p>Copyright &copy;</p>

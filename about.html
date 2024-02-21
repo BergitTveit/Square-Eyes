@@ -5,9 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="About | Connect film-lovers with independent filmmakers. Discover unique, high-quality films from diverse voices and perspectives. Support small, talented filmmakers at Square Eyes." />
-
+    <link rel="shortcut icon" href="assets/png/favicon.png" type="image/png" />
     <title>About | What and who are Square Eyes</title>
     <link href="assets/css/styles.css" rel="stylesheet" />
+    <script type="module" src="../js/api/search.js" defer></script>
+
   </head>
   <body>
     <header>
@@ -21,17 +23,15 @@
           </a>
         </div>
         <div class="browse">
-          <a href="genres/1genres.html" class="cta cta-s">Films</a>
+          <a href="films/index.html" class="cta cta-s">Films</a>
         </div>
         <div class="margin-s">
           <label for="searchInput" class="visually-hidden">Search:</label>
           <input type="text" id="searchInput" placeholder="Search" />
         </div>
-        <div class="margin-s">
-          <a href="cart.html" class="cta cta-s color">Cart</a>
-        </div>
+        <button class="margin-s cart-btn">Cart</button>
         <div class="login">
-          <a href="whoarewe.html" class="cta cta-s color">Log in</a>
+          <a href="#" class="cta cta-s color">Log in</a>
         </div>
       </nav>
     </header>
@@ -84,10 +84,10 @@
     <footer>
       <nav aria-label="Footer Navigation">
         <ul>
-          <li><a href="index.html">Home</a></li>
+        
           <li><a href="contact.html">Contact</a></li>
           <li><a href="about.html">About</a></li>
-          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="#">FAQ</a></li>
         </ul>
       </nav>
       Copyright &copy;

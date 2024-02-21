@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content=" Jenn has washed ashore a small tropical island and it doesn't take
+      her long to realize she's completely alone. She must spend her days
+      not only surviving the elements, but must also fend off the
+      malevolent force that comes out each night."
+    />
+    <link
+      rel="shortcut icon"
+      href="../assets/png/favicon.png"
+      type="image/png"
+    />
+    <title></title>
+    <!-- <link href="../assets/css/styles.css" rel="stylesheet" /> -->
+    <link rel="preload" href="../assets/css/styles.css" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+
+
+    <noscript>
+      <link href="../assets/css/styles.css" rel="stylesheet" />
+    </noscript>
+  
+   
+    <script type="module" src="../js/pages/films.js" defer></script>
+    <script type="module" src="../js/pages/filmdetails.js" defer></script>
+ <script type="module" src="../js/render/post.js" defer></script>
+
+  </head>
+  <body>
+    <header>
+      <nav aria-label="Main Navigation">
+        <div>
+          <a href="../index.html">
+            <img
+              src="../assets/png/SquareEyes_Logo.png"
+              alt="SquareEyes Logo"
+              class="logo"
+            />
+          </a>
+        </div>
+        <div class="browse">
+          <a href="../films/index.html" class="cta cta-s">Films</a>
+        </div>
+        <div class="margin-s">
+          <label for="searchInput" class="visually-hidden">Search:</label>
+          <input type="text" id="searchInput" placeholder="Search" />
+        </div>
+        <button class="cart-btn">Cart</button>
+        <div class="login">
+          <a href="#" class="cta cta-s color">Log in</a>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+
+
+        <div id="loader" class="loader"></div>
+        <!-- loader ok -->
+
+
+        <div class="film-details">
+        </div>
+
+
+        <!-- <div class="film-details">
+          <div class="film-details1"></div>
+          <div><h2 class="film-title"></h2></div>
+          <div class="film-details-info2"></div>
+          <p class="release"></p>
+          <p class="price"></p>
+          <p class="film-info"></p>
+        </div>
+       -->
+
+      <div class="banners">
+        <h1 class="genrebar">Keep discovering</h1>
+      </div>
+      <div class="banners">
+        <div>
+          <label for="genreSelect">Select Genre:</label>
+          <select id="genreSelect">
+            <option value="All">All Genres</option>
+            <option value="Action">Action</option>
+            <option value="Comedy">Comedy</option>
+            <option value="Drama">Drama</option>
+            <option value="Horror">Horror</option>
+            <option value="Kids">Kids</option>
+
+          </select>
+        </div>
+      <div class="film-list"></div>
+    </main>
+    <footer>
+      <nav aria-label="Footer Navigation">
+        <ul>
+          <li><a href="../contact.html">Contact</a></li>
+          <li><a href="../about.html">About</a></li>
+          <li><a href="#">FAQ</a></li>
+        </ul>
+      </nav>
+      Copyright &copy;
+    </footer>
+  </body>
+</html>
